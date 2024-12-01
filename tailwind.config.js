@@ -4,6 +4,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",],
   theme: {
     extend: {},
+    fontFamily:{
+      league: "League Script",
+      playwrite: "Playwrite Hrvatska Lijeva",
+      raleway: "Raleway",
+      madi: "Ms Madi",
+      formal: "Petit Formal Script",
+    },
   },
   plugins: [],
 }
