@@ -15,6 +15,8 @@ import gal63 from "../assets/homePage/gal63.jpeg";
 import gal108 from "../assets/homePage/gal108.jpeg";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
+import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css';
 
 const HomePage = () => {
   return (
@@ -31,15 +33,15 @@ const HomePage = () => {
             <SwiperSlide><div className="h-[100svh] min-w-fit bg-cover bg-no-repeat bg-center" style={{backgroundImage: `url(${gal63})`}}/></SwiperSlide>
           </Swiper>
         
-      <div className="bg-black z-40 absolute top-0 bottom-0 bg-opacity-65 w-full h-[100svh] flex flex-col justify-center items-center text-white">
+      <div className="bg-black z-40 absolute top-0 bottom-0 bg-opacity-65 w-[100%] h-[100svh] flex flex-col justify-center items-center text-white">
           <div className="absolute top-0 right-0 left-0">
             <Navbar />
           </div>
           <div className="flex flex-col justify-center items-center gap-1">
           <div>
-            <h1 className="glow text-white cursor-default text-7xl lg:text-8xl text-center font-league font-semibold">Sharmila Sharma</h1>
+            <h1 className="glow text-white cursor-default text-7xl lg:text-8xl text-center font-madi font-medium">Sharmila Sharma</h1>
           </div>
-          <div className="font-playwrite italic opacity-80 -mt-3 sm:text-xl lg:text-3xl">
+          <div className="font-raleway font-light -mt-2 sm:text-xl">
             <Typewriter 
             options={{
               strings: ["Professional Artist", "Love creating beautiful art."],
@@ -50,17 +52,18 @@ const HomePage = () => {
           </div>
           <div className="flex gap-4 mt-4">
             <Link to="https://www.facebook.com/sharmila.sharma.7739">
-              <img src={facebook} alt="facebook" className="w-8 h-8 lg:w-10 lg:h-10 cursor-pointer hover:scale-110 duration-200 hover:shadow-md hover:shadow-white rounded-full border-2 border-white"/>
+              <img data-tooltip-id="my-tooltip" data-tooltip-place="bottom" data-tooltip-content="Facebook" src={facebook} alt="facebook" className="w-8 h-8 lg:w-10 lg:h-10 cursor-pointer hover:scale-110 duration-200 hover:shadow-md hover:shadow-white rounded-full border-2 border-white"/>
             </Link>
             <Link to="https://x.com/sharmilaart">
-              <img src={twitter} alt="twitter" className="w-8 h-8 lg:w-10 lg:h-10 cursor-pointer hover:scale-110 duration-200 hover:shadow-md hover:shadow-white rounded-full border-2 border-white"/>
+              <img data-tooltip-id="my-tooltip" data-tooltip-place="bottom" data-tooltip-content="Twitter" src={twitter} alt="twitter" className="w-8 h-8 lg:w-10 lg:h-10 cursor-pointer hover:scale-110 duration-200 hover:shadow-md hover:shadow-white rounded-full border-2 border-white"/>
             </Link>
             <Link to="https://www.instagram.com/sharmila.sharma31/">
-              <img src={instagram} alt="instagram" className="w-8 h-8 lg:w-10 lg:h-10 cursor-pointer hover:scale-110 duration-200 hover:shadow-md hover:shadow-white rounded-full border-2 border-white"/>
+              <img data-tooltip-id="my-tooltip" data-tooltip-place="bottom" data-tooltip-content="Instagram" src={instagram} alt="instagram" className="w-8 h-8 lg:w-10 lg:h-10 cursor-pointer hover:scale-110 duration-200 hover:shadow-md hover:shadow-white rounded-full border-2 border-white"/>
             </Link>
             <Link to="mailto:sharmila.sharma31@gmail.com">
-              <img src={gmail} alt="gmail" className="w-8 h-8 lg:w-10 lg:h-10 cursor-pointer hover:scale-110 duration-200 hover:shadow-md hover:shadow-white rounded-full border-2 border-white"/>
+              <img data-tooltip-id="my-tooltip" data-tooltip-place="bottom" data-tooltip-content="Email" src={gmail} alt="gmail" className="w-8 h-8 lg:w-10 lg:h-10 cursor-pointer hover:scale-110 duration-200 hover:shadow-md hover:shadow-white rounded-full border-2 border-white"/>
             </Link>
+            <Tooltip id="my-tooltip" />
           </div>
           </div>
       </div>
