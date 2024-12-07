@@ -5,7 +5,7 @@ import { useState } from "react";
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
   return (
-    <div className="w-full text-white font-semibold h-16 flex rounded-b-lg justify-between items-center px-4 bg-black bg-opacity-65 border-2">
+    <div className="w-full text-white font-semibold h-16 flex justify-between items-center px-4 bg-black bg-opacity-65 border-2">
         <div>
             <Link to="/">
                 <p className="text-4xl lg:text-5xl mt-2 ml-1 text-end font-league font-extrabold duration-200">SS.</p>

@@ -33,7 +33,7 @@ const Gallery = () => {
           <motion.div
           initial = {{ opacity: 0}}
           animate = {{opacity: 1}}
-          transition={{duration: 3}} 
+          transition={{duration: 2}} 
           className="relative sm:w-[160%]">
             <img src={gal2} className="rounded-md border-2 shadow-md shadow-green-300"/>
             <Link to="/about">
@@ -45,7 +45,7 @@ const Gallery = () => {
           <motion.div
           initial = {{ opacity: 0}}
           animate = {{opacity: 1}}
-          transition={{duration: 4}}
+          transition={{duration: 2}}
           className="relative sm:w-[160%]">
             <img src={gal3} className="rounded-md border-2 shadow-md shadow-green-300"/>
             <Link to="/about">
