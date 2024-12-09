@@ -26,6 +26,12 @@ body, html {
                 1px 1px 50px green;
 }
 
+.journal {
+    text-shadow: 0px 0px 5px red,
+                 0px 0px 10px red,
+                1px 1px 50px red;
+}
+
 .glow {
     animation: lightson 0.5s ease 3 forwards;
 }
