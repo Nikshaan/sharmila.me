@@ -11,8 +11,8 @@ const About = () => {
         <Navbar />
     </div>
     <div className="bg-[#161E43] h-full flex flex-col justify-center sm:pb-16">
-    <img src={starry} className="mt-16"/>
-      <div className="bg-black relative border-2 border-white bg-opacity-65 p-4 rounded-xl mx-4 md:mx-10 lg:mx-16  -mt-16 sm:-mt-72 lg:-mt-[24rem] xl:-mt-[34rem] mb-14 h-3/4 flex justify-center items-center flex-col">
+    <img src={starry} alt="background-image-starry" className="mt-16"/>
+      <div className="bg-black relative border-2 border-white bg-opacity-65 p-4 rounded-xl mx-4 md:mx-10 lg:mx-16  -mt-16 sm:-mt-[17rem] md:-mt-[22rem] lg:-mt-[31rem] xl:-mt-[40rem] 2xl:-mt-[49rem] 3xl:-mt-[59rem] 4xl:-mt-[71rem] mb-14 h-3/4 flex justify-center items-center flex-col">
           <h1 className="text-white font-thin text-9xl font-madi -mt-20 about absolute -top-1">About</h1>
           <div className="overflow-hidden">
           <motion.p
@@ -30,7 +30,7 @@ const About = () => {
           </div>
       </div>
     </div>
-    <div className="z-50 absolute w-full">
+    <div className="z-50 absolute w-full bg-black">
       <Footer />
     </div>
     </>
