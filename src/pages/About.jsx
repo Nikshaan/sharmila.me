@@ -3,8 +3,14 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { motion } from "motion/react";
 import starry from "../assets/starry.jpg";
+import { useEffect } from "react";
 
 const About = () => {
+
+  useEffect(()=> {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  }, [])
+  
 
   var prevScrollpos = window.pageYOffset;
   window.onscroll = () => {

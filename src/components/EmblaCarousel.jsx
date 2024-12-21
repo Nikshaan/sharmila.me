@@ -90,7 +90,7 @@ const EmblaCarousel = (props) => {
   }, [emblaApi, tweenParallax])
 
   return (
-    <div className="embla">
+    <div className="embla pt-10 pb-2 bg-green-950 rounded-2xl">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((slide, index) => (
@@ -110,9 +110,13 @@ const EmblaCarousel = (props) => {
       </div>
 
       <div className="embla__controls">
-        <div className="embla__buttons">
-          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
-          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        <div className="embla__buttons px-2">
+          <div className='bg-[#5F823C] border-2 rounded-2xl'>
+            <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+          </div>
+          <div className='bg-[#5F823C] border-2 rounded-2xl'>
+            <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+          </div>
         </div>
       </div>
     </div>

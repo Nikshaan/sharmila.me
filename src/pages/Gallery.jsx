@@ -6,8 +6,14 @@ import gal2 from "../assets/gal2.jpeg";
 import gal3 from "../assets/gal3.jpeg";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
+import { useEffect } from "react";
 
 const Gallery = () => {
+
+  useEffect(()=> {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  }, [])
+  
 
   var prevScrollpos = window.pageYOffset;
   window.onscroll = () => {

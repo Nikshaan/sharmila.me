@@ -1,8 +1,14 @@
 import Footer from "../components/Footer"
 import Navbar from "../components/Navbar"
 import mit from "../assets/mit.jpg"
+import { useEffect } from "react"
 
 const Journal = () => {
+
+  useEffect(()=> {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  }, [])
+  
 
   var prevScrollpos = window.pageYOffset;
   window.onscroll = () => {
