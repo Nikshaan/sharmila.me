@@ -42,9 +42,17 @@ const HomePage = () => {
           <div className="absolute top-0 right-0 left-0">
             <Navbar />
           </div>
-          <div className="flex flex-col justify-center items-center gap-1">
+          <div className="flex flex-col mb-[80px] sm:mb-0 justify-center items-center gap-1">
             <div>
-              <h1 className="glow text-white cursor-default text-7xl lg:text-8xl text-center font-madi font-medium">Sharmila Sharma</h1>
+              <h1 className="glow text-white cursor-default text-8xl lg:text-9xl text-center font-madi font-medium">
+              {"Sharmila Sharma".split("").map((letter, index) =>
+                            (
+                                <span className = "hoverText" key={index}>
+                                    {letter}
+                                </span>
+                            )
+                        )}
+              </h1>
             </div>
             <div className="font-raleway font-light -mt-2 sm:text-xl">
               <Typewriter 

@@ -5,14 +5,26 @@ import { motion } from "motion/react";
 import starry from "../assets/starry.jpg";
 
 const About = () => {
+
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = () => {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else if (currentScrollPos >= 64) {
+    document.getElementById("navbar").style.top = "-200px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
   return (
     <>
-    <div className="absolute top-0 right-0 left-0">
+    <div id="navbar" className="fixed top-0 right-0 left-0 transition-all duration-200 z-50">
         <Navbar />
     </div>
     <div className="bg-[#161E43] h-full flex flex-col justify-center sm:pb-16">
     <img src={starry} alt="background-image-starry" className="mt-16"/>
-      <div className="bg-black relative border-2 border-white bg-opacity-65 p-4 rounded-xl mx-4 md:mx-10 lg:mx-16  -mt-16 sm:-mt-[17rem] md:-mt-[22rem] lg:-mt-[31rem] xl:-mt-[40rem] 2xl:-mt-[49rem] 3xl:-mt-[59rem] 4xl:-mt-[71rem] mb-14 h-3/4 flex justify-center items-center flex-col">
+      <div className="bg-black relative border-2 border-white bg-opacity-85 p-4 rounded-xl mx-4 md:mx-10 lg:mx-16  -mt-16 xsm:-mt-[12rem] sm:-mt-[17rem] md:-mt-[22rem] lg:-mt-[31rem] xl:-mt-[40rem] 2xl:-mt-[49rem] 3xl:-mt-[59rem] 4xl:-mt-[71rem] mb-14 h-3/4 flex justify-center items-center flex-col">
           <h1 className="text-white font-thin text-9xl font-madi -mt-20 about absolute -top-1">About</h1>
           <div className="overflow-hidden">
           <motion.p

@@ -12,6 +12,8 @@ export default {
       formal: "Petit Formal Script",
     },
     screens: {
+      'xsm': '475px',
+
       'sm': '640px',
 
       'md': '768px',
