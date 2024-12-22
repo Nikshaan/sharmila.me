@@ -170,11 +170,37 @@ body, html {
 }
 
 .embla {
-    max-width: 40rem;
+    max-width: 30rem;
     margin: auto;
     --slide-height: 100%;
     --slide-spacing: 1rem;
     --slide-size: 80%;
+  }
+
+  @media (min-width: 640px) {
+    .embla{
+        max-width: 50rem;
+        --slide-height: 50rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .embla{
+        max-width: 60rem;
+        --slide-height: 55rem;
+    }
+  }
+  @media (min-width: 1280px) {
+    .embla{
+        max-width: 75rem;
+        --slide-height: 65rem;
+    }
+  }
+  @media (min-width: 1536px) {
+    .embla{
+        max-width: 85rem;
+        --slide-height: 75rem;
+    }
   }
   .embla__viewport {
     overflow: hidden;
@@ -257,4 +283,3 @@ body, html {
     flex: 0 0 calc(115% + (var(--slide-spacing) * 2));
     object-fit: cover;
   }
-  

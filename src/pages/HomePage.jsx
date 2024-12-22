@@ -44,7 +44,7 @@ const HomePage = () => {
           </div>
           <div className="flex flex-col mb-[80px] sm:mb-0 justify-center items-center gap-1">
             <div>
-              <h1 className="glow text-white cursor-default text-8xl lg:text-9xl text-center font-madi font-medium">
+              <h1 className="glow text-white cursor-default text-8xl lg:text-[10rem] text-center font-madi font-medium">
               {"Sharmila Sharma".split("").map((letter, index) =>
                             (
                                 <span className = "hoverText" key={index}>

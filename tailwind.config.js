@@ -26,7 +26,9 @@ export default {
 
       '3xl' : '1825px',
 
-      '4xl': '2150px'
+      '4xl': '2150px',
+
+      '5xl': '2160px'
     },
   },
   plugins: [],
