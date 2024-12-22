@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import {
   NextButton,
@@ -6,6 +6,7 @@ import {
   usePrevNextButtons
 } from './EmblaCarouselArrowButtons'
 import PropTypes from 'prop-types'
+import Modal from './Modal'
 
 const TWEEN_FACTOR_BASE = 0.2
 
@@ -14,6 +15,8 @@ const EmblaCarousel = (props) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
   const tweenFactor = useRef(0)
   const tweenNodes = useRef([])
+  const [openModal, setOpenModal] = useState(false);
+  const [slideImg, setSlideImg] = useState('');
 
    EmblaCarousel.propTypes = {
       slides: PropTypes.any,
@@ -90,7 +93,7 @@ const EmblaCarousel = (props) => {
   }, [emblaApi, tweenParallax])
 
   return (
-    <div className="embla pt-10 pb-2 bg-green-950 rounded-2xl">
+    <div className="embla pt-10 pb-2 bg-black rounded-2xl border-2">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((slide, index) => (
@@ -99,22 +102,26 @@ const EmblaCarousel = (props) => {
                 <div className="embla__parallax__layer">
                   <img
                     className="embla__slide__img embla__parallax__img"
-                    src={slide}
+                    src={slides[index]}
                     alt="Image"
+                    onClick={() => {setOpenModal(true), setSlideImg(index)}}
                   />
                 </div>
               </div>
             </div>
           ))}
         </div>
+        { 
+          openModal && <Modal closeModal={setOpenModal} image = {slideImg} slideList = {slides} />
+        }
       </div>
 
       <div className="embla__controls">
         <div className="embla__buttons px-2">
-          <div className='bg-[#5F823C] border-2 rounded-2xl'>
+          <div className='bg-white border-2 rounded-2xl'>
             <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           </div>
-          <div className='bg-[#5F823C] border-2 rounded-2xl'>
+          <div className='bg-white border-2 rounded-2xl'>
             <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
           </div>
         </div>
