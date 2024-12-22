@@ -1,7 +1,7 @@
-import Footer from "../components/Footer"
-import Navbar from "../components/Navbar"
-import mit from "../assets/mit.jpg"
-import { useEffect } from "react"
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import mit from "../assets/mit.jpg";
+import { useEffect } from "react";
 
 const Journal = () => {
 

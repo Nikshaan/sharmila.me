@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types'
-import { useCallback, useEffect, useState } from 'react'
+import PropTypes from 'prop-types';
+import { useCallback, useEffect, useState } from 'react';
 
 export const usePrevNextButtons = (emblaApi, onButtonClick) => {
-  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)
-  const [nextBtnDisabled, setNextBtnDisabled] = useState(true)
+  const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
+  const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
 
   const onPrevButtonClick = useCallback(() => {
     if (!emblaApi) return
@@ -38,7 +38,12 @@ export const usePrevNextButtons = (emblaApi, onButtonClick) => {
 }
 
 export const PrevButton = (props) => {
-  const { children, ...restProps } = props
+  const { children, ...restProps } = props;
+
+  PrevButton.propTypes = {
+    children: PropTypes.any,
+  };
+  
   return (
     <button
       className="embla__button embla__button--prev"
@@ -57,11 +62,7 @@ export const PrevButton = (props) => {
 }
 
 export const NextButton = (props) => {
-  const { children, ...restProps } = props
-
-  PrevButton.propTypes = {
-    children: PropTypes.any,
-  };
+  const { children, ...restProps } = props;
   
   NextButton.propTypes = {
     children: PropTypes.any,

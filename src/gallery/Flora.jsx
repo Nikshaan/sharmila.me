@@ -1,18 +1,18 @@
-import Navbar from "../components/Navbar"
-import home01 from "../assets/homePage/home01.jpg";
-import gal55 from "../assets/homePage/gal55.jpg";
-import gal57 from "../assets/homePage/gal57.jpg";
-import gal63 from "../assets/homePage/gal63.jpeg";
+import Navbar from "../components/Navbar";
 import EmblaCarousel from "../components/EmblaCarousel";
 import Footer from "../components/Footer";
 import parallax from "../assets/parallax.png";
 import scroller from "../assets/scroller.png";
 import { useEffect, useState } from "react";
 import ScrollView from "../components/ScrollView";
+import gal1 from "../assets/Flora/gal1.jpg";
+import gal2 from "../assets/Flora/gal2.jpg";
+import gal3 from "../assets/Flora/gal3.jpg";
+import gal4 from "../assets/Flora/gal4.jpg";
 
 const Flora = () => {
-  const OPTIONS = { dragFree: true, loop: true }
-  const SLIDES = [home01, gal55, gal57, gal63]
+  const OPTIONS = { dragFree: true, loop: true };
+  const SLIDES = [gal1, gal2, gal3, gal4];
   const [showSlide, setShowSlide] = useState("parallax");
 
   useEffect(()=> {
@@ -30,6 +30,7 @@ const Flora = () => {
   }
   prevScrollpos = currentScrollPos;
 }
+
   return (
     <div className="bg-gradient-to-b from-green-950 to-[#5F823C] w-full h-full">
         <div id="navbar" className="fixed top-0 right-0 left-0 transition-all duration-200 z-20">

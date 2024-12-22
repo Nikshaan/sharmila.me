@@ -9,6 +9,7 @@ const Modal = ({closeModal, image, slideList}) => {
           image: PropTypes.any,
           slideList: PropTypes.any,
         };
+        
   return (
     <div className="bg-black bg-opacity-90 flex  justify-center items-center max-h-screen w-full fixed top-0 bottom-0 left-0 right-0 z-40">
         <div className="w-[95%] h-[95%] overflow-x-clip relative overflow-y-auto flex  justify-center items-center">

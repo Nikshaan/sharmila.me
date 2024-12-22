@@ -19,6 +19,7 @@ const ScrollView = ({slides}) => {
         }
     }
     window.addEventListener("scroll", scrollFunc);
+    
   return (
     <div className="relative">
         <div className="px-4 py-8 mx-4 grid min-w-[320px] grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8 bg-black bg-opacity-85 rounded-2xl">

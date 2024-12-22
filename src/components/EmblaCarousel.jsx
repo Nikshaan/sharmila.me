@@ -1,20 +1,20 @@
-import { useCallback, useEffect, useRef, useState } from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
+import { useCallback, useEffect, useRef, useState } from 'react';
+import useEmblaCarousel from 'embla-carousel-react';
 import {
   NextButton,
   PrevButton,
   usePrevNextButtons
-} from './EmblaCarouselArrowButtons'
-import PropTypes from 'prop-types'
-import Modal from './Modal'
+} from './EmblaCarouselArrowButtons';
+import PropTypes from 'prop-types';
+import Modal from './Modal';
 
-const TWEEN_FACTOR_BASE = 0.2
+const TWEEN_FACTOR_BASE = 0.2;
 
 const EmblaCarousel = (props) => {
-  const { slides, options } = props
-  const [emblaRef, emblaApi] = useEmblaCarousel(options)
-  const tweenFactor = useRef(0)
-  const tweenNodes = useRef([])
+  const { slides, options } = props;
+  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const tweenFactor = useRef(0);
+  const tweenNodes = useRef([]);
   const [openModal, setOpenModal] = useState(false);
   const [slideImg, setSlideImg] = useState('');
 
@@ -28,23 +28,23 @@ const EmblaCarousel = (props) => {
     nextBtnDisabled,
     onPrevButtonClick,
     onNextButtonClick
-  } = usePrevNextButtons(emblaApi)
+  } = usePrevNextButtons(emblaApi);
 
   const setTweenNodes = useCallback((emblaApi) => {
     tweenNodes.current = emblaApi.slideNodes().map((slideNode) => {
       return slideNode.querySelector('.embla__parallax__layer')
     })
-  }, [])
+  }, []);
 
   const setTweenFactor = useCallback((emblaApi) => {
     tweenFactor.current = TWEEN_FACTOR_BASE * emblaApi.scrollSnapList().length
-  }, [])
+  }, []);
 
   const tweenParallax = useCallback((emblaApi, eventName) => {
-    const engine = emblaApi.internalEngine()
-    const scrollProgress = emblaApi.scrollProgress()
-    const slidesInView = emblaApi.slidesInView()
-    const isScrollEvent = eventName === 'scroll'
+    const engine = emblaApi.internalEngine();
+    const scrollProgress = emblaApi.scrollProgress();
+    const slidesInView = emblaApi.slidesInView();
+    const isScrollEvent = eventName === 'scroll';
 
     emblaApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
       let diffToTarget = scrollSnap - scrollProgress
@@ -55,24 +55,24 @@ const EmblaCarousel = (props) => {
 
         if (engine.options.loop) {
           engine.slideLooper.loopPoints.forEach((loopItem) => {
-            const target = loopItem.target()
+            const target = loopItem.target();
 
             if (slideIndex === loopItem.index && target !== 0) {
-              const sign = Math.sign(target)
+              const sign = Math.sign(target);
 
               if (sign === -1) {
-                diffToTarget = scrollSnap - (1 + scrollProgress)
+                diffToTarget = scrollSnap - (1 + scrollProgress);
               }
               if (sign === 1) {
-                diffToTarget = scrollSnap + (1 - scrollProgress)
+                diffToTarget = scrollSnap + (1 - scrollProgress);
               }
             }
           })
         }
 
-        const translate = diffToTarget * (-1 * tweenFactor.current) * 100
-        const tweenNode = tweenNodes.current[slideIndex]
-        tweenNode.style.transform = `translateX(${translate}%)`
+        const translate = diffToTarget * (-1 * tweenFactor.current) * 100;
+        const tweenNode = tweenNodes.current[slideIndex];
+        tweenNode.style.transform = `translateX(${translate}%)`;
       })
     })
   }, [])

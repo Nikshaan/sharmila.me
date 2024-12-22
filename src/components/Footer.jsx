@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import { Tooltip } from "react-tooltip"
+import { Link } from "react-router-dom";
+import { Tooltip } from "react-tooltip";
 import facebook from "../assets/facebook.png";
 import twitter from "../assets/twitter.png";
 import instagram from "../assets/instagram.png";
