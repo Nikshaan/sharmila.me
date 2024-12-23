@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Paintings from "./gallery/Paintings";
 import Craft from "./gallery/Craft";
 import Flora from "./gallery/Flora";
+import Post from "./pages/Post";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Route path="/sharmila.me/gallery/paintings" element={<Paintings />} />
       <Route path="/sharmila.me/gallery/craft" element={<Craft />} />
       <Route path="/sharmila.me/gallery/flora" element={<Flora />} />
+      <Route path="/sharmila.me/post/:postTitle" element={<Post />} />
     </Routes>
     </>
   )

@@ -10,6 +10,12 @@ export default {
       raleway: "Raleway",
       madi: "Ms Madi",
       formal: "Petit Formal Script",
+      roboto: "Roboto",
+      montserrat: "Montserrat",
+      crimson: "Crimson Text",
+      enriqueta: "Enriqueta",
+      open: "Open Sans",
+      nunito: "Nunito"
     },
     screens: {
       'xsm': '475px',

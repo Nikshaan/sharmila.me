@@ -31,7 +31,7 @@ const Navbar = () => {
                     }
                 </div>
             </div>
-            <ul className="gap-8 font-formal lg:text-xl hidden sm:flex">
+            <ul className="gap-8 font-montserrat lg:text-xl hidden sm:flex">
                 <NavLink to="/sharmila.me/gallery">
                     <p className="underline-offset-2 hover:scale-95 duration-200">gallery</p>
                 </NavLink>
