@@ -7,10 +7,21 @@ import Paintings from "./gallery/Paintings";
 import Craft from "./gallery/Craft";
 import Flora from "./gallery/Flora";
 import Post from "./pages/Post";
+import { useEffect, useState } from "react";
+import PreLoader from "./components/PreLoader";
 
 const App = () => {
+  const [loader, upadateLoader] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      upadateLoader(false);
+    }, 10000);
+  }, []);
+
   return (
     <>
+    <PreLoader loader={loader} />
     <Routes>
       <Route path="/sharmila.me/" element={<Homepage />} />
       <Route path="/sharmila.me/gallery" element={<Gallery />} />

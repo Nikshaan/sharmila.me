@@ -13,7 +13,7 @@ const Modal = ({closeModal, image, slideList}) => {
   return (
     <div className="bg-black bg-opacity-90 flex justify-center items-center max-h-screen w-full fixed top-0 bottom-0 left-0 right-0 z-40">
         <div className="w-[95%] h-[95%] overflow-x-clip relative overflow-y-auto flex  justify-center items-center">
-            <div className="absolute top-2 left-2 rounded-full text-2xl lg:text-4xl bg-white">
+            <div className="absolute top-2 right-2 rounded-full text-2xl lg:text-4xl bg-white">
                 <img src={cancel} alt="cancel" className="w-8 lg:w-10 2xl:w-12 cursor-pointer bg-white rounded-full dark:bg-transparent" onClick={() => closeModal(false)} />
             </div>
             <div className="absolute lg:relative -left-6 px-2 text-white cursor-pointer">

@@ -11,9 +11,9 @@ const PostSlide = ({img, title, author, date, readTime }) => {
         content: PropTypes.any,
       };
   return (
-    <div className="w-full bg-white">
+    <div className="m-5 border-2 border-black bg-white">
         <Link to={`/sharmila.me/post/${title}`} className="flex flex-col sm:flex-row p-1 gap-3">
-        <div className="w-full md:w-1/2">
+        <div className=" md:w-1/2">
             <img src={img} />
         </div>
         <div className="flex flex-col justify-center items-center sm:text-center gap-1 xl:gap-4 p-1 font-montserrat sm:w-1/2">

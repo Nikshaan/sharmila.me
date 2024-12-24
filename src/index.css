@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Enriqueta:wght@400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Script&family=Ms+Madi&family=Petit+Formal+Script&family=Playwrite+HR+Lijeva:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=Luxurious+Roman&family=Pirata+One&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body, html {
-    background-color: black;
+    background-color:#fff5de;
     margin: 0;
     padding: 0;
 }
@@ -27,63 +28,7 @@ body, html {
   -webkit-tap-highlight-color: transparent;
 }
 
-.about {
-    text-shadow: 0px 0px 5px darkblue,
-                 0px 0px 10px darkblue,
-                1px 1px 50px darkblue;
-}
-
-.gallery {
-    text-shadow: 0px 0px 5px green,
-                 0px 0px 10px green,
-                1px 1px 50px green;
-}
-
-.journal {
-    text-shadow: 0px 0px 5px red,
-                 0px 0px 10px red,
-                1px 1px 50px red;
-}
-
-.glow {
-    animation: lightson 0.5s ease 3 forwards;
-}
-
-@keyframes lightson {
-    0% {
-        opacity: 0;
-        text-shadow: 0px 0px 0px white,
-                     0px 0px 0px white,
-                     0px 0px 0px white;
-    }
-    20% {
-        opacity: 0.5;
-        text-shadow: 0px 0px 2.5px white,
-                     0px 0px 5px white,
-                     1px 1px 25px white;
-    }
-    40% {
-        opacity: 0;
-        text-shadow: 0px 0px 1px white,
-                     0px 0px 2px white,
-                     0px 0px 10px white;
-    }
-    50% {
-        opacity: 1;
-        text-shadow: 0px 0px 5px white,
-                     0px 0px 10px white,
-                     1px 1px 50px white;
-    }
-    100% {
-        opacity: 1;
-        text-shadow: 0px 0px 5px white,
-                     0px 0px 10px white,
-                     1px 1px 50px white;
-    }
-}
-
 .active {
-    text-shadow: 1px 1px 10px white;
     text-decoration: underline;
 }
 
@@ -157,16 +102,20 @@ body, html {
 }
 
 .hoverText {
-    cursor: pointer;
-    transition: 0.1s;
+  cursor: pointer;
+  transition: 
+  0.2s font-weight,
+  0.2s color;
 }
 
 .hoverText:hover {
     font-weight: 900;
+    color: rgb(227, 199, 137);
 }
 
 .hoverText:hover + .hoverText {
-    font-weight: 700;
+    font-weight: 500;
+    color: rgb(192, 166, 105);
 }
 
 .hoverText:hover + .hoverText+ .hoverText {
@@ -174,7 +123,8 @@ body, html {
 }
 
 .hoverText:has(+ .hoverText:hover) {
-    font-weight: 700;
+    font-weight: 500;
+    color: rgb(201, 175, 115);
 }
 
 .hoverText:has(+ .hoverText + .hoverText:hover) {

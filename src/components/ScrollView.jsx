@@ -22,7 +22,7 @@ const ScrollView = ({slides}) => {
     
   return (
     <div className="relative">
-        <div className="px-4 py-8 mx-4 min-w-[320px] columns-1 md:columns-2 xl:columns-3 2xl:columns-4 gap-4 bg-black bg-opacity-85 rounded-2xl border-2">
+        <div className="px-4 py-8 mx-4 min-w-[320px] columns-1 md:columns-2 xl:columns-3 2xl:columns-4 gap-4 bg-black border-yellow-950 rounded-2xl border-2">
           {slides.map((slide, index) => (
             <div className="w-full mb-4 break-inside-avoid" key={index}>
                 <img

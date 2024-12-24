@@ -15,7 +15,10 @@ export default {
       crimson: "Crimson Text",
       enriqueta: "Enriqueta",
       open: "Open Sans",
-      nunito: "Nunito"
+      nunito: "Nunito",
+      luxury: "Luxurious Roman",
+      pirata: "Pirata One",
+      almendra: "Almendra SC"
     },
     screens: {
       'xsm': '475px',
