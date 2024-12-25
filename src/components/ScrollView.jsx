@@ -37,7 +37,7 @@ const ScrollView = ({slides}) => {
         { 
           openModal && <Modal closeModal={setOpenModal} image = {slideImg} slideList = {slides}/>
         }
-      <div className={`fixed z-20 bg-white border-2 border-black p-2 rounded-full  bottom-0.5 right-0.5 lg:bottom-3 lg:right-3 xl:bottom-5 xl:right-5 ${showArrow?'block':'hidden'}`}>
+      <div className={`fixed z-20 bg-[#fff5de] border-2 border-black p-2 rounded-full  bottom-0.5 right-0.5 lg:bottom-3 lg:right-3 xl:bottom-5 xl:right-5 ${showArrow?'block':'hidden'}`}>
             <img className="cursor-pointer h-10" alt="arrow" onClick={() => {window.scrollTo({top: 0, behavior: 'smooth'});}} src={arrow} />
         </div>
     </div>

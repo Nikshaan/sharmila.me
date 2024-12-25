@@ -9,6 +9,7 @@ body, html {
     background-color:#fff5de;
     margin: 0;
     padding: 0;
+    min-width: 390px;
 }
 
 *{
@@ -146,22 +147,16 @@ body, html {
     }
   }
 
-  @media (min-width: 1024px) {
-    .embla{
-        max-width: 60rem;
-        --slide-height: 55rem;
-    }
-  }
   @media (min-width: 1280px) {
     .embla{
-        max-width: 75rem;
-        --slide-height: 65rem;
+        max-width: 60rem;
+        --slide-height: 60rem;
     }
   }
   @media (min-width: 1536px) {
     .embla{
-        max-width: 85rem;
-        --slide-height: 75rem;
+        max-width: 70rem;
+        --slide-height: 70rem;
     }
   }
   .embla__viewport {

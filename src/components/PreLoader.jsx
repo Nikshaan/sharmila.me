@@ -10,7 +10,7 @@ const PreLoader = ({loader}) => {
     <motion.div
     initial = {{ y : 0 }}
     animate = {{ y : '-100vh' }}
-    transition={{ duration : 2, delay : 10}}
+    transition={{ duration : 2, delay : 3}}
     className={`${loader ? 'fixed flex justify-center items-center top-0 left-0 bottom-0 right-0 w-full h-full z-50 bg-[#fff5de]' : 'hidden'}`}>
 
       <motion.div className="w-full flex flex-col justify-center items-center mb-40">
