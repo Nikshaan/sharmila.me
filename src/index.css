@@ -105,8 +105,8 @@ body, html {
 .hoverText {
   cursor: pointer;
   transition: 
-  0.2s font-weight,
-  0.2s color;
+  0.3s font-weight,
+  0.3s color;
 }
 
 .hoverText:hover {

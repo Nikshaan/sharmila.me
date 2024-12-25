@@ -39,7 +39,7 @@ const Craft = () => {
             <Navbar />
         </div>
         <div className="pt-20 pb-4 bg-[#fff5de] text-[#8a733e] w-full flex flex-col justify-center items-center">
-            <h1 className="text-center text-8xl lg:text-9xl 2xl:text-[10rem] font-almendra">CRAFT</h1>
+            <h1 className="text-center text-8xl lg:text-8xl 2xl:text-9xl font-almendra">CRAFT</h1>
         </div>
         <div className="h-full">
             <div className="w-full h-14 flex justify-end items-center bg-[#8a733e] border-2 border-yellow-950">

@@ -21,7 +21,7 @@ const HomePage = () => {
           <img src={creeper} className="absolute top-[4.5rem] -right-4 sm:-right-7 lg:-right-8 sm:w-[70%] md:w-[60%] lg:w-[40%]"/>
           <div className="flex flex-col mb-[80px]  justify-center items-center gap-1 z-30 w-full">
             <div className="z-30 bg-[#fff5de] bg-opacity-50 w-full py-8">
-              <h1 className="disable-text text-[#8a733e] cursor-default text-8xl lg:text-9xl 4xl:text-[11rem] text-center font-almendra z-30 w-full">
+              <h1 className="disable-text text-[#8a733e] cursor-default text-8xl lg:text-9xl xl:text-[10rem] 2xl:text-[11rem] text-center font-almendra z-30 w-full">
               {"Sharmila Sharma".split("").map((letter, index) =>
                             (
                                 <span className = "hoverText z-50" key={index}>

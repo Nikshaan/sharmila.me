@@ -18,7 +18,7 @@ const PostSlide = ({img, title, author, date, readTime }) => {
     initial = {{ x: "100vh"}}
     animate = {{x: 0}}
     transition={{ duration: 4, type: spring, stiffness: 30}} 
-    className="m-5 xl:mx-32 4xl:mx-96 border-2 border-black bg-white">
+    className="m-5 xl:mx-32 4xl:mx-96 border-2 border-[#8a733e] bg-[#fffaef] shadow-md shadow-[#8a733e] hover:shadow-lg hover:shadow-[#8a733e] transition-shadow">
         <Link to={`/sharmila.me/post/${title}`} className="flex flex-col sm:flex-row p-1 2xl:p-2 gap-3">
         <div className=" md:w-1/2">
             <img src={img} className="w-full border-2 border-black"/>
