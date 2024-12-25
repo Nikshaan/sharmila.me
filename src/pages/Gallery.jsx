@@ -12,9 +12,9 @@ const Gallery = () => {
   useEffect(()=> {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
   }, [])
-  
 
   var prevScrollpos = window.pageYOffset;
+
   window.onscroll = () => {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
@@ -23,15 +23,17 @@ const Gallery = () => {
     document.getElementById("navbar").style.top = "-200px";
   }
   prevScrollpos = currentScrollPos;
-}
+  }
 
   return (
     <div className="relative pb-80 min-w-[390px]">
-    <div id="navbar" className="fixed top-0 right-0 left-0 transition-all duration-200 z-40">
-        <Navbar />
-    </div>
-    <div className="bg-[#fff5de] text-[#8a733e] mt-20 mb-14 h-full flex flex-col justify-center items-center sm:pb-16">
+      <div id="navbar" className="fixed top-0 right-0 left-0 transition-all duration-200 z-40">
+          <Navbar />
+      </div>
+
+      <div className="bg-[#fff5de] text-[#8a733e] mt-20 mb-14 h-full flex flex-col justify-center items-center sm:pb-16">
         <h1 className="font-almendra text-8xl lg:text-9xl 2xl:text-[10rem] border-b-2 border-[#8a733e]">Gallery</h1>
+
         <div className="overflow-hidden mt-2 flex flex-col font-semibold sm:flex-row gap-2 sm:mx-10 items-start sm:mt-20">
           <motion.div
           initial = {{ opacity: 0}}
@@ -46,6 +48,7 @@ const Gallery = () => {
               <p className="w-full text-center text-4xl 2xl:text-6xl font-crimson">PAINTINGS</p>
             </div>
           </motion.div>
+
           <motion.div
           initial = {{ opacity: 0}}
           animate = {{opacity: 1}}
@@ -59,6 +62,7 @@ const Gallery = () => {
               <p className="w-full text-center text-4xl 2xl:text-6xl font-crimson">CRAFT</p>
             </div>
           </motion.div>
+
           <motion.div
           initial = {{ opacity: 0}}
           animate = {{opacity: 1}}
@@ -74,11 +78,10 @@ const Gallery = () => {
           </motion.div>
         </div>
       </div>
-
-    <div className="z-40 absolute bottom-0 w-full -mt-5">
-      <Footer />
-    </div>
-    </div>
+      <div className="z-40 absolute bottom-0 w-full -mt-5">
+        <Footer />
+      </div>
+   </div>
   )
 }
 

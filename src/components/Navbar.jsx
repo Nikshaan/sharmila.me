@@ -12,6 +12,7 @@ const Navbar = () => {
                 <p className="text-4xl md:-mt-1.5 lg:text-5xl text-end font-almendra font-extrabold duration-200">SS.</p>
             </Link>
         </div>
+
         <div>
             <div className="sm:hidden text-xl absolute top-2 right-2 flex flex-col justify-center items-center">
                 <Hamburger toggled={isOpen} toggle={setOpen} />
@@ -31,6 +32,7 @@ const Navbar = () => {
                     }
                 </div>
             </div>
+
             <ul className="gap-8 font-almendra md:text-xl lg:text-3xl hidden sm:flex">
                 <NavLink to="/sharmila.me/gallery">
                     <p className="underline-offset-2 hover:scale-95 duration-200">gallery</p>
@@ -42,6 +44,7 @@ const Navbar = () => {
                     <p className="underline-offset-2 hover:scale-95 duration-200">about</p>
                 </NavLink>
             </ul>
+            
         </div>
     </div>
   )

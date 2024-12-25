@@ -1,21 +1,35 @@
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom";
 import PostContent from "../assets/PostContent";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import back from "../assets/back.png";
+import { useNavigate } from "react-router-dom";
 
 const Post = () => {
-    const{postTitle} = useParams();
+    const{postId} = useParams();
+    const navigate = useNavigate();
     const [currPost, setCurrPost] = useState({});
 
     const fetchPostData = () => {
         PostContent.map((post) => {
-            if(post.title == postTitle){
+            if(post.id == postId){
                 setCurrPost(post)
             }
-        })
-    }
+          })
+        }
+
+    function nextPost() {
+      if(currPost.id != PostContent.length){
+      navigate(`/sharmila.me/post/${currPost.id + 1}`);
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }}
+
+    function prevPost() {
+      if(currPost.id != 1){
+      navigate(`/sharmila.me/post/${currPost.id - 1}`);
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+    }}
 
     useEffect(() => {
       async function func() {
@@ -23,9 +37,10 @@ const Post = () => {
         }
       func();
       document.getElementById("content").innerHTML = currPost.content;
-      }, [currPost]);
+      }, [currPost, postId]);
 
     var prevScrollpos = window.pageYOffset;
+
     window.onscroll = () => {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
@@ -34,13 +49,14 @@ const Post = () => {
       document.getElementById("navbar").style.top = "-200px";
     }
     prevScrollpos = currentScrollPos;
-  }
+    }
 
   return (
     <div className="bg-[#fff5de] text-black min-w-[390px]">
         <div id="navbar" className="fixed top-0 right-0 left-0 transition-all duration-200 z-50">
             <Navbar />
         </div>
+
         <div className="w-full mt-16 relative text-center font-nunito flex flex-col justify-center items-center">
             <Link to="/sharmila.me/journal">
                 <img src={back} className="h-8 lg:h-10 absolute top-2 left-2 bg-white rounded-full z-20"/>
@@ -55,7 +71,15 @@ const Post = () => {
                 <p>Posted on {currPost.date}</p>
             </div>
         </div>
-        <div id="content" className="my-10 lg:my-20 p-2 text-xl sm:text-2xl lg:text-3xl font-nunito flex flex-col gap-4" />
+
+        <div id="content" className="my-10 xl:px-8 lg:my-20 p-2 text-xl sm:text-2xl lg:text-3xl font-nunito flex flex-col gap-4" />
+
+        <div className=" flex justify-around mb-14 text-lg sm:text-xl lg:text-2xl font-luxury text-[#8a733e] font-thin">
+            <p onClick={prevPost} className="cursor-pointer">Previous post</p>
+            <p onClick={() => document.body.scrollTop = document.documentElement.scrollTop = 0} className="cursor-pointer">Back to Top</p>
+            <p onClick={nextPost} className="cursor-pointer">Next post</p>
+        </div>
+
         <Footer />
     </div>
   )

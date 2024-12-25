@@ -118,6 +118,7 @@ const Paintings = () => {
   }, [])
   
   var prevScrollpos = window.pageYOffset;
+
   window.onscroll = () => {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
@@ -126,16 +127,18 @@ const Paintings = () => {
     document.getElementById("navbar").style.top = "-200px";
   }
   prevScrollpos = currentScrollPos;
-}
+  }
 
   return (
     <div className="bg-[#fff5de] text-[#8a733e] w-full h-full">
         <div id="navbar" className="fixed top-0 right-0 left-0 transition-all duration-200 z-20">
             <Navbar />
         </div>
+
         <div className="pt-20 pb-4 bg-[#fff5de] text-[#8a733e] w-full flex flex-col justify-center items-center">
             <h1 className="text-center text-8xl lg:text-8xl 2xl:text-9xl font-almendra">PAINTINGS</h1>
         </div>
+
         <div className="h-full">
             <div className="w-full h-14 flex justify-end items-center bg-[#8a733e] border-2 border-yellow-950">
                   <div className="flex justify-end items-top gap-1 w-full p-2">
@@ -147,6 +150,7 @@ const Paintings = () => {
                     </div>
                   </div>
             </div>
+
             <div className="w-full my-14">
               {
                 showSlide == "parallax" && <EmblaCarousel slides={SLIDES} options={OPTIONS}/>
@@ -155,6 +159,7 @@ const Paintings = () => {
                 showSlide == "scroller" && <ScrollView slides={SLIDES}/>
               }
             </div>
+            
         </div>
         <Footer />
     </div>

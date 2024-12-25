@@ -3,6 +3,7 @@ import cancel from "../assets/cancel.png";
 import { useState } from "react";
 
 const Modal = ({closeModal, image, slideList}) => {
+    
     const [imgInd, setImgInd] = useState(image);
     Modal.propTypes = {
           closeModal: PropTypes.any,
@@ -16,6 +17,7 @@ const Modal = ({closeModal, image, slideList}) => {
             <div className="absolute top-2 right-2 rounded-full text-2xl lg:text-4xl bg-white">
                 <img src={cancel} alt="cancel" className="w-8 lg:w-10 2xl:w-12 cursor-pointer bg-white rounded-full dark:bg-transparent" onClick={() => closeModal(false)} />
             </div>
+
             <div className="absolute lg:relative -left-6 px-2 text-white cursor-pointer">
                 <div onClick={() => {if(imgInd != 0){setImgInd(imgInd-1)}}} className='embla__button'>
                     <svg className="embla__button__svg" viewBox="0 0 532 532">
@@ -26,9 +28,11 @@ const Modal = ({closeModal, image, slideList}) => {
                     </svg>
                 </div>
             </div>
+
             <div className="flex flex-col justify-center h-full w-full items-center">
                 <img src={slideList[imgInd]} className="w-full sm:h-full sm:w-auto"/>
             </div>
+
             <div className="absolute lg:relative -right-6 px-2 text-white cursor-pointer">
                 <div onClick={() => {if(imgInd != slideList.length-1){ setImgInd(imgInd+1)}}} className='embla__button'>
                     <svg className="embla__button__svg" viewBox="0 0 532 532">

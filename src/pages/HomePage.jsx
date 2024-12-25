@@ -9,8 +9,8 @@ import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
-import creeper from "../assets/creeper3.png"
-import creeper2 from "../assets/creeper.png"
+import creeper from "../assets/creeper3.png";
+import creeper2 from "../assets/creeper.png";
 
 const HomePage = () => {
   return (
@@ -18,7 +18,9 @@ const HomePage = () => {
           <div className="absolute top-0 right-0 left-0 z-40 transition-all duration-200">
             <Navbar />
           </div>
+
           <img src={creeper} className="absolute top-[4.5rem] -right-4 sm:-right-7 lg:-right-8 sm:w-[70%] md:w-[60%] lg:w-[40%]"/>
+
           <div className="flex flex-col mb-[80px]  justify-center items-center gap-1 z-30 w-full">
             <div className="z-30 bg-[#fff5de] bg-opacity-50 w-full py-8">
               <h1 className="disable-text text-[#8a733e] cursor-default text-8xl lg:text-9xl xl:text-[10rem] 2xl:text-[11rem] text-center font-almendra z-30 w-full">
@@ -42,6 +44,7 @@ const HomePage = () => {
                 />
               </div>
             </div>
+
             <div className="flex gap-4 mt-4 z-30">
               <Link to="https://www.facebook.com/sharmila.sharma.7739">
                 <img data-tooltip-id="my-tooltip" data-tooltip-place="bottom" data-tooltip-content="Facebook" src={facebook} alt="facebook" className="w-9 h-9 lg:w-12 lg:h-12 cursor-pointer hover:scale-110 duration-200 hover:shadow-md hover:shadow-[#8a733e] rounded-full border-2 border-[#8a733e]"/>
@@ -57,13 +60,16 @@ const HomePage = () => {
               </Link>
               <Tooltip id="my-tooltip" />
             </div>
+
             <img src={creeper2} className="w-1/2 left-0 absolute bottom-44 sm:w-[48%] md:w-[45%] lg:w-[30%]"/>
+
             <div className="absolute bottom-0 left-0 right-0">
               <div className="wave wave1"></div>
               <div className="wave wave2"></div>
               <div className="wave wave3"></div>
               <div className="wave wave4"></div>
             </div>
+
           </div>
       </div>
   )

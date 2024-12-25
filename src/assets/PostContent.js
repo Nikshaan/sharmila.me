@@ -7,6 +7,7 @@ import world from "../assets/PostImg/world.jpg"
 
 export const PostContent = [
     {
+        id: 1,
         img: alice,
         title: "Alice in Wonderland",
         author: "Lewis Carrol",
@@ -22,6 +23,7 @@ export const PostContent = [
         "<p>There were doors all round the hall, but they were all locked; and when Alice had been all the way down one side and up the other, trying every door, she walked sadly down the middle, wondering how she was ever to get out again.</p>"
     },
     {
+        id: 2,
         img: scarlet,
         title: "The Scarlet Plague",
         author: "Jack London",
@@ -39,6 +41,7 @@ export const PostContent = [
         "<p>'Red is good enough for me,' Hare-Lip muttered obstinately. 'My dad  calls red red, and he ought to know. He says everybody died of the Red  Death.'</p>"
     },
     {
+        id: 3,
         img: wizard,
         title: "The Wizard of Oz",
         author: "L. Frank Baum",
@@ -56,6 +59,7 @@ export const PostContent = [
         "<p>Forthwith there was heard a great buzzing in the air, and a swarm of black bees came flying toward her.</p>"
     },
     {
+        id: 4,
         img: earth,
         title: "At the Earth's Core",
         author: "Edgar Rice Burroughs",
@@ -72,6 +76,7 @@ export const PostContent = [
         "<p>As he came for me, like a great bear, I ducked again beneath his outstretched arm, and as I came up planted as clean a blow upon his jaw as ever you have seen. Down went that great mountain of flesh sprawling upon the ground. He was so surprised and dazed that he lay there for several seconds before he made any attempt to rise, and I stood over him with another dose ready when he should gain his knees.</p>"
     },
     {
+        id: 5,
         img: moby,
         title: "Moby Dick",
         author: "Herman Melville",
@@ -82,6 +87,7 @@ export const PostContent = [
         "<p>'With this sin of disobedience in him, Jonah still further flouts at God, by seeking to flee from Him. He thinks that a ship made by men will carry him into countries where God does not reign, but only the Captains of this earth. He skulks about the wharves of Joppa, and seeks a ship that's bound for Tarshish. There lurks, perhaps, a hitherto unheeded meaning here. By all accounts Tarshish could have been no other city than the modern Cadiz. That's the opinion of learned men. And where is Cadiz, shipmates? Cadiz is in Spain; as far by water, from Joppa, as Jonah could possibly have sailed in those ancient days, when the Atlantic was an almost unknown sea. Because Joppa, the modern Jaffa, shipmates, is on the most easterly coast of the Mediterranean, the Syrian; and Tarshish or Cadiz more than two thousand miles to the westward from that, just outside the Straits of Gibraltar. See ye not then, shipmates, that Jonah sought to flee world-wide from God? Miserable man! Oh! most contemptible and worthy of all scorn; with slouched hat and guilty eye, skulking from his God; prowling among the shipping like a vile burglar hastening to cross the seas. So disordered, self-condemning is his look, that had there been policemen in those days, Jonah, on the mere suspicion of something wrong, had been arrested ere he touched a deck. How plainly he's a fugitive! no baggage, not a hat-box, valise, or carpet-bag,—no friends accompany him to the wharf with their adieux. At last, after much dodging search, he finds the Tarshish ship receiving the last items of her cargo; and as he steps on board to see its Captain in the cabin, all the sailors for the moment desist from hoisting in the goods, to mark the stranger's evil eye. Jonah sees this; but in vain he tries to look all ease and confidence; in vain essays his wretched smile. Strong intuitions of the man assure the mariners he can be no innocent. In their gamesome but still serious way, one whispers to the other—'Jack, he's robbed a widow;' or, 'Joe, do you mark him; he's a bigamist;' or, 'Harry lad, I guess he's the adulterer that broke jail in old Gomorrah, or belike, one of the missing murderers from Sodom.' Another runs to read the bill that's stuck against the spile upon the wharf to which the ship is moored, offering five hundred gold coins for the apprehension of a parricide, and containing a description of his person. He reads, and looks from Jonah to the bill; while all his sympathetic shipmates now crowd round Jonah, prepared to lay their hands upon him. Frighted Jonah trembles, and summoning all his boldness to his face, only looks so much the more a coward. He will not confess himself suspected; but that itself is strong suspicion. So he makes the best of it; and when the sailors find him not to be the man that is advertised, they let him pass, and he descends into the cabin.</p>"
     },
     {
+        id: 6,
         img: world,
         title: "Around the World in 80 Days",
         author: "Jules Verne",

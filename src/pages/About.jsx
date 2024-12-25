@@ -12,6 +12,7 @@ const About = () => {
   
 
   var prevScrollpos = window.pageYOffset;
+
   window.onscroll = () => {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
@@ -20,15 +21,17 @@ const About = () => {
     document.getElementById("navbar").style.top = "-200px";
   }
   prevScrollpos = currentScrollPos;
-}
+  }
 
   return (
     <div className="relative pb-80 min-w-[390px]">
     <div id="navbar" className="fixed top-0 right-0 left-0 z-40 transition-all duration-200">
         <Navbar />
     </div>
+
     <div className="bg-[#fff5de] mt-20 h-full flex flex-col justify-center items-center sm:pb-5 overflow-hidden">
           <h1 className="text-[#8a733e] border-[#8a733e] border-b-2 text-8xl lg:text-9xl 2xl:text-[10rem] font-almendra">About</h1>
+
           <motion.div
           initial = {{ y: "100vh"}}
           animate = {{y: 0}}
@@ -47,6 +50,7 @@ const About = () => {
             Right now, I am planning to participate in various embodiments to show my artwork.
           </p>
           </motion.div>
+
       </div>
     <div className="z-40 absolute left-0 right-0 bottom-0 w-full -mt-4">
       <Footer />
