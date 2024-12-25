@@ -38,17 +38,17 @@ const Flora = () => {
         </div>
         
         <div className="pt-20 pb-4 bg-[#fff5de] text-[#8a733e] w-full flex flex-col justify-center items-center">
-            <h1 className="text-center text-8xl lg:text-8xl 2xl:text-9xl  font-almendra">FLORA</h1>
+            <h1 className="text-center text-7xl lg:text-8xl 2xl:text-9xl  font-almendra">FLORA</h1>
         </div>
 
         <div className="h-full">
             <div className="w-full h-14 text-white flex justify-end items-center bg-[#8a733e] border-2 border-yellow-950">
                   <div className="flex justify-end items-top gap-1 w-full p-2">
                     <div className="border-2 px-2 flex justify-center items-center cursor-pointer bg-[#fff5de] border-yellow-950 rounded-xl">
-                      <img onClick={() => setShowSlide("parallax")} src={parallax} className="h-10"/>
+                      <img alt="parallax" onClick={() => setShowSlide("parallax")} src={parallax} className="h-10"/>
                     </div>
                     <div className="border-2 px-2 flex justify-center items-center cursor-pointer bg-[#fff5de] border-yellow-950rounded-xl">
-                      <img onClick={() => setShowSlide("scroller")} src={scroller} className="h-9"/>
+                      <img alt="scrollView" onClick={() => setShowSlide("scroller")} src={scroller} className="h-9"/>
                     </div>
                   </div>
             </div>

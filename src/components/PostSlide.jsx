@@ -22,7 +22,7 @@ const PostSlide = ({id, img, title, author, date, readTime }) => {
     className="m-5 xl:mx-32 4xl:mx-96 border-2 border-[#8a733e] bg-[#fffaef] shadow-md shadow-[#8a733e] hover:shadow-lg hover:shadow-[#8a733e] transition-shadow">
         <Link to={`/sharmila.me/post/${id}`} className="flex flex-col sm:flex-row p-1 2xl:p-2 gap-3">
         <div className=" md:w-1/2">
-            <img src={img} className="w-full border-2 border-black"/>
+            <img src={img} alt="poster" className="w-full border-2 border-black"/>
         </div>
         <div className="flex flex-col justify-center items-center sm:text-center gap-1 xl:gap-4 p-1 font-enriqueta sm:w-1/2">
             <h1 className="font-extrabold text-3xl sm:text-4xl lg:text-5xl 2xl:text-7xl">{title}</h1>

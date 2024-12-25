@@ -12,10 +12,10 @@ const Modal = ({closeModal, image, slideList}) => {
         };
         
   return (
-    <div className="bg-black bg-opacity-90 flex justify-center items-center max-h-screen w-full fixed top-0 bottom-0 left-0 right-0 z-40">
+    <div className="bg-black bg-opacity-90 flex justify-center items-center w-full fixed top-0 bottom-0 left-0 right-0 z-40">
         <div className="w-[95%] h-[95%] overflow-x-clip relative overflow-y-auto flex  justify-center items-center">
             <div className="absolute top-2 right-2 rounded-full text-2xl lg:text-4xl bg-white">
-                <img src={cancel} alt="cancel" className="w-8 lg:w-10 2xl:w-12 cursor-pointer bg-white rounded-full dark:bg-transparent" onClick={() => closeModal(false)} />
+                <img src={cancel} alt="cancel" className="w-8 lg:w-10 2xl:w-12 cursor-pointer rounded-full dark:bg-transparent" onClick={() => closeModal(false)} />
             </div>
 
             <div className="absolute lg:relative -left-6 px-2 text-white cursor-pointer">
@@ -30,7 +30,7 @@ const Modal = ({closeModal, image, slideList}) => {
             </div>
 
             <div className="flex flex-col justify-center h-full w-full items-center">
-                <img src={slideList[imgInd]} className="w-full sm:h-full sm:w-auto"/>
+                <img src={slideList[imgInd]} alt="image" className="w-full sm:h-full sm:w-auto"/>
             </div>
 
             <div className="absolute lg:relative -right-6 px-2 text-white cursor-pointer">

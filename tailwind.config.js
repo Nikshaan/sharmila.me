@@ -5,21 +5,14 @@ export default {
   theme: {
     extend: {},
     fontFamily:{
-      league: "League Script",
-      playwrite: "Playwrite Hrvatska Lijeva",
       raleway: "Raleway",
-      madi: "Ms Madi",
-      formal: "Petit Formal Script",
-      roboto: "Roboto",
-      montserrat: "Montserrat",
       crimson: "Crimson Text",
       enriqueta: "Enriqueta",
-      open: "Open Sans",
       nunito: "Nunito",
       luxury: "Luxurious Roman",
-      pirata: "Pirata One",
       almendra: "Almendra SC"
     },
+    
     screens: {
       'xsm': '475px',
 

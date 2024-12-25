@@ -59,9 +59,9 @@ const Post = () => {
 
         <div className="w-full mt-16 relative text-center font-nunito flex flex-col justify-center items-center">
             <Link to="/sharmila.me/journal">
-                <img src={back} className="h-8 lg:h-10 absolute top-2 left-2 bg-white rounded-full z-20"/>
+                <img alt="back" src={back} className="h-8 lg:h-10 absolute top-2 left-2 bg-white rounded-full z-20"/>
             </Link>
-            <img src={currPost.img} />
+            <img alt="poster" src={currPost.img} />
             <div className="absolute top-0 bottom-0 flex flex-col text-white bg-black bg-opacity-75 justify-center items-center w-full p-2">
                 <p className="font-bold text-4xl sm:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl">{currPost.title}</p>
                 <p className="font-medium text-2xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">{currPost.author}</p>

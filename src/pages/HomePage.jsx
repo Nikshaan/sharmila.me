@@ -19,10 +19,10 @@ const HomePage = () => {
             <Navbar />
           </div>
 
-          <img src={creeper} className="absolute top-[4.5rem] -right-4 sm:-right-7 lg:-right-8 sm:w-[70%] md:w-[60%] lg:w-[40%]"/>
+          <img src={creeper} alt="image" className="absolute top-[4.5rem] -right-4 sm:-right-7 lg:-right-8 sm:w-[70%] md:w-[60%] lg:w-[40%]"/>
 
-          <div className="flex flex-col mb-[80px]  justify-center items-center gap-1 z-30 w-full">
-            <div className="z-30 bg-[#fff5de] bg-opacity-50 w-full py-8">
+          <div className="flex flex-col mb-[80px] justify-center items-center gap-1 z-30 w-full">
+            <div className="z-30 bg-[#fff5de] bg-opacity-85 w-full">
               <h1 className="disable-text text-[#8a733e] cursor-default text-8xl lg:text-9xl xl:text-[10rem] 2xl:text-[11rem] text-center font-almendra z-30 w-full">
               {"Sharmila Sharma".split("").map((letter, index) =>
                             (
@@ -33,7 +33,7 @@ const HomePage = () => {
                         )}
               </h1>
             </div>
-            <div className="bg-[#fff5de] z-40 -mt-8 w-[100vh] flex justify-center items-center">
+            <div className="bg-[#fff5de] z-40 -mt-1 bg-opacity-85 w-[100vh] flex justify-center items-center w-full">
               <div className="font-almendra font-light -mt-2 text-lg sm:text-xl lg:text-3xl z-40">
                 <Typewriter 
                 options={{
@@ -61,7 +61,7 @@ const HomePage = () => {
               <Tooltip id="my-tooltip" />
             </div>
 
-            <img src={creeper2} className="w-1/2 left-0 absolute bottom-44 sm:w-[48%] md:w-[45%] lg:w-[30%]"/>
+            <img src={creeper2} alt="image" className="w-1/2 left-0 absolute bottom-44 sm:w-[48%] md:w-[45%] lg:w-[30%]"/>
 
             <div className="absolute bottom-0 left-0 right-0">
               <div className="wave wave1"></div>
