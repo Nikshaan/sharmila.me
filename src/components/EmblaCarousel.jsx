@@ -93,7 +93,7 @@ const EmblaCarousel = (props) => {
   }, [emblaApi, tweenParallax])
 
   return (
-    <div className="embla pt-10 pb-2 bg-black rounded-2xl border-2 border-yellow-950">
+    <div className="embla pt-10 pb-2 bg-black border-2 border-yellow-950">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((slide, index) => (

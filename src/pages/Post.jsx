@@ -21,14 +21,12 @@ const Post = () => {
 
     function nextPost() {
       if(currPost.id != PostContent.length){
-      navigate(`/sharmila.me/post/${currPost.id + 1}`);
-      document.body.scrollTop = document.documentElement.scrollTop = 0;
+      navigate(`/sharmila.me/journal/post/${currPost.id + 1}`);
     }}
 
     function prevPost() {
       if(currPost.id != 1){
-      navigate(`/sharmila.me/post/${currPost.id - 1}`);
-      document.body.scrollTop = document.documentElement.scrollTop = 0;
+      navigate(`/sharmila.me/journal/post/${currPost.id - 1}`);
     }}
 
     useEffect(() => {
@@ -37,13 +35,14 @@ const Post = () => {
         }
       func();
       document.getElementById("content").innerHTML = currPost.content;
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
       }, [currPost, postId]);
 
     var prevScrollpos = window.pageYOffset;
 
     window.onscroll = () => {
     var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
+    if (prevScrollpos > currentScrollPos || currentScrollPos == 0) {
       document.getElementById("navbar").style.top = "0";
     } else if (currentScrollPos >= 64) {
       document.getElementById("navbar").style.top = "-200px";
@@ -74,7 +73,7 @@ const Post = () => {
 
         <div id="content" className="my-10 xl:px-8 lg:my-20 p-2 text-xl sm:text-2xl lg:text-3xl font-nunito flex flex-col gap-4" />
 
-        <div className=" flex justify-around mb-14 text-lg sm:text-xl lg:text-2xl font-luxury text-[#8a733e] font-thin">
+        <div className="disable-text flex justify-around mb-14 text-lg sm:text-xl lg:text-2xl font-luxury text-[#8a733e] font-thin">
             <p onClick={prevPost} className="cursor-pointer">Previous post</p>
             <p onClick={() => document.body.scrollTop = document.documentElement.scrollTop = 0} className="cursor-pointer">Back to Top</p>
             <p onClick={nextPost} className="cursor-pointer">Next post</p>

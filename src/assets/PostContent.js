@@ -27,7 +27,7 @@ export const PostContent = [
         img: scarlet,
         title: "The Scarlet Plague",
         author: "Jack London",
-        time: "2 minute",
+        time: "2 minutes",
         date: "March 20, 2016",
         content: "<p>The boys laughed and lay down again in the sand, while Granser sighed  ponderously. He had eaten too much, and, with hands clasped on his  paunch, the fingers interlaced, he resumed his maunderings.</p>" +
         "<p>'The fleeting systems lapse like foam,' he mumbled what was evidently  a quotation. 'That's it—foam, and fleeting. All man's toil upon the  planet was just so much foam. He domesticated the serviceable animals,  destroyed the hostile ones, and cleared the land of its wild vegetation.  And then he passed, and the flood of primordial life rolled back again,  sweeping his handiwork away—the weeds and the forest inundated his  fields, the beasts of prey swept over his flocks, and now there are  wolves on the Cliff House beach.' He was appalled by the thought. 'Where  four million people disported themselves, the wild wolves roam to-day,  and the savage progeny of our loins, with prehistoric weapons, defend  themselves against the fanged despoilers. Think of it! And all because  of the Scarlet Death—'</p>" +

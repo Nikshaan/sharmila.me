@@ -5,11 +5,10 @@ import PostSlide from "../components/PostSlide";
 import PostContent from "../assets/PostContent";
 
 const Journal = () => {
-  const [filteredPosts, setFilteredPosts] = useState([]);
+  const [filteredPosts, setFilteredPosts] = useState(PostContent);
 
   useEffect(()=> {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
-    setFilteredPosts(PostContent)
   }, [])
   
   var prevScrollpos = window.pageYOffset;
