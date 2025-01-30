@@ -19,13 +19,13 @@ const PostSlide = ({id, img, title, author, date, readTime }) => {
     initial = {{ x: "100vh"}}
     animate = {{x: 0}}
     transition={{ duration: 4, type: spring, stiffness: 30}} 
-    className="m-5 xl:mx-32 4xl:mx-96 border-2 border-[#8a733e] bg-[#fffaef] shadow-md shadow-[#8a733e] hover:shadow-lg hover:shadow-[#8a733e] transition-shadow">
-        <Link to={`/sharmila.me/journal/post/${id}`} className="flex flex-col sm:flex-row p-1 2xl:p-2 gap-3">
-        <div className=" md:w-1/2">
-            <img src={img} alt="poster" className="w-full border-2 border-black"/>
+    className="m-5 border-2 text-white shadow-md shadow-[#6fb3f2] hover:shadow-lg hover:shadow-[#6fb3f2] transition-shadow duration-300 cursor-pointer pb-8">
+        <Link to={`/sharmila.me/journal/post/${id}`} className="flex flex-col p-1 2xl:p-2 gap-3">
+        <div className=" md:w-full border-2">
+            <img src={img} alt="poster" className="w-full border-black"/>
         </div>
-        <div className="flex flex-col justify-center items-center sm:text-center gap-1 xl:gap-4 p-1 font-enriqueta sm:w-1/2">
-            <h1 className="font-extrabold text-3xl sm:text-4xl lg:text-5xl 2xl:text-7xl text-center">{title}</h1>
+        <div className="flex w-full flex-col justify-center items-center sm:text-center gap-1 xl:gap-4 p-1 font-enriqueta pb-2">
+            <h1 className="font-extrabold text-3xl sm:text-4xl lg:text-5xl 2xl:text-7xl text-center w-full">{title}</h1>
             <p className="font-semibold text-2xl  sm:text-3xl lg:text-3xl 2xl:text-5xl text-center">{author}</p>
             <p className="text-lg sm:text-xl lg:text-2xl 2xl:text-3xl text-center">{readTime} read</p>
             <p className="text-lg sm:text-xl lg:text-2xl 2xl:text-3xl text-center">Posted on {date}</p>

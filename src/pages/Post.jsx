@@ -51,7 +51,7 @@ const Post = () => {
     }
 
   return (
-    <div className="bg-[#fff5de] text-black min-w-[390px]">
+    <div className="bg-gradient-to-b from-black to-[#14014f] text-white min-w-[390px]">
         <div id="navbar" className="fixed top-0 right-0 left-0 transition-all duration-200 z-50">
             <Navbar />
         </div>
@@ -73,7 +73,7 @@ const Post = () => {
 
         <div id="content" className="my-10 xl:px-8 lg:my-20 p-2 text-xl sm:text-2xl lg:text-3xl font-nunito flex flex-col gap-4" />
 
-        <div className="disable-text flex justify-around mb-14 text-lg sm:text-xl lg:text-2xl font-luxury text-[#8a733e] font-thin">
+        <div className="disable-text flex justify-around mb-14 text-lg sm:text-xl lg:text-2xl font-luxury font-thin">
             <p onClick={prevPost} className="cursor-pointer">Previous post</p>
             <p onClick={() => document.body.scrollTop = document.documentElement.scrollTop = 0} className="cursor-pointer">Back to Top</p>
             <p onClick={nextPost} className="cursor-pointer">Next post</p>

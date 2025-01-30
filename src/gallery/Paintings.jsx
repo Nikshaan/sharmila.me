@@ -1,8 +1,6 @@
 import Navbar from "../components/Navbar";
 import EmblaCarousel from "../components/EmblaCarousel";
 import Footer from "../components/Footer";
-import parallax from "../assets/parallax.png";
-import scroller from "../assets/scroller.png";
 import { useEffect, useState } from "react";
 import ScrollView from "../components/ScrollView";
 import gal1 from "../assets/Paintings/gal1.jpg";
@@ -103,6 +101,8 @@ import gal108 from "../assets/Paintings/gal108.jpg";
 import gal109 from "../assets/Paintings/gal109.jpg";
 import gal110 from "../assets/Paintings/gal110.jpg";
 import gal111 from "../assets/Paintings/gal111.jpg";
+import "react-toggle/style.css";
+import Toggle from "react-toggle";
 
 const Paintings = () => {
   const OPTIONS = { dragFree: true, loop: true }
@@ -111,7 +111,7 @@ const Paintings = () => {
      gal41, gal42, gal43, gal44, gal45, gal46, gal47, gal48, gal49, gal50, gal51, gal52, gal53, gal54, gal55, gal56, gal57, gal58, gal59, gal60,
      gal61, gal62, gal63, gal64, gal65, gal66, gal67, gal81, gal82, gal83, gal84, gal85, gal86, gal87, gal88, gal89, gal90, gal91, gal92, gal93,
      gal94, gal95, gal96, gal97, gal98, gal99, gal100, gal101, gal102, gal103, gal104, gal105, gal106, gal107, gal108, gal109, gal110, gal111];
-  const [showSlide, setShowSlide] = useState("parallax");
+  const [showSlide, setShowSlide] = useState("scroller");
 
   useEffect(()=> {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
@@ -129,26 +129,34 @@ const Paintings = () => {
   prevScrollpos = currentScrollPos;
   }
 
+  const viewMode = () => {
+    if(showSlide == "scroller"){
+      setShowSlide("parallax");
+    }else{
+      setShowSlide("scroller");
+    }
+  }
+
   return (
-    <div className="bg-[#fff5de] text-[#8a733e] w-full h-full">
+    <div className="w-full h-full bg-gradient-to-b from-black to-[#14014f]">
         <div id="navbar" className="fixed top-0 right-0 left-0 transition-all duration-200 z-20">
             <Navbar />
         </div>
 
-        <div className="pt-20 pb-4 bg-[#fff5de] text-[#8a733e] w-full flex flex-col justify-center items-center">
-            <h1 className="text-center text-7xl lg:text-8xl 2xl:text-9xl font-almendra">PAINTINGS</h1>
+        <div className="pt-20 pb-4 w-full flex flex-col justify-center items-center">
+            <h1 className="text-center text-7xl lg:text-8xl 2xl:text-9xl font-domine text-white">PAINTINGS</h1>
         </div>
 
         <div className="h-full">
-            <div className="w-full h-14 flex justify-end items-center bg-[#8a733e] border-2 border-yellow-950">
-                  <div className="flex justify-end items-top gap-1 w-full p-2">
-                    <div onClick={() => setShowSlide("parallax")} className="border-2 px-2 flex justify-center items-center cursor-pointer bg-[#fff5de] border-yellow-950 rounded-xl">
-                      <img alt="parallax" src={parallax} className="h-10"/>
-                    </div>
-                    <div onClick={() => setShowSlide("scroller")} className="border-2 px-2 flex justify-center items-center cursor-pointer bg-[#fff5de] border-yellow-950 rounded-xl">
-                      <img alt="scrollView" src={scroller} className="h-9"/>
-                    </div>
-                  </div>
+            <div className="w-full text-black h-14 flex justify-end items-center border-2 px-4 bg-[#6fb3f2]">
+              <p className="pb-1.5 font-bold">COLUMNS</p>
+              <label className="px-2">
+                <Toggle
+                  defaultChecked={false}
+                  icons={false}
+                  onChange={() => viewMode()} />
+              </label>
+              <p className="pb-1.5 font-bold">PARALLAX</p>
             </div>
 
             <div className="w-full my-14">

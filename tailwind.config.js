@@ -10,7 +10,10 @@ export default {
       enriqueta: "Enriqueta",
       nunito: "Nunito",
       luxury: "Luxurious Roman",
-      almendra: "Almendra SC"
+      almendra: "Almendra SC",
+      noto: "Noto Serif",
+      domine: "Domine",
+      sree: "Sree Krushnadevaraya"
     },
     
     screens: {

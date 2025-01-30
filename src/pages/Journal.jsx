@@ -30,17 +30,17 @@ const Journal = () => {
   }
 
   return (
-    <div className="relative pb-80 overflow-hidden min-w-[390px]">
+    <div className="relative pb-80 overflow-hidden min-w-[390px] bg-gradient-to-b from-black to-[#14014f]">
       <div id="navbar" className="fixed top-0 right-0 left-0  z-40 transition-all duration-200">
           <Navbar />
       </div>
 
-      <div className="bg-[#fff5de] h-full flex flex-col justify-center items-center sm:pb-5 my-20">
-        <h1 className="text-[#8a733e] border-[#8a733e] border-b-2 font-almendra text-8xl lg:text-9xl 2xl:text-[10rem]">Journal</h1>
+      <div className="h-full flex flex-col justify-center items-center sm:pb-5 my-20">
+        <h1 className="border-b-2 font-domine text-8xl lg:text-9xl 2xl:text-[10rem] text-white border-[#6fb3f2]">JOURNAL</h1>
         <div className="mt-10 mb-5 lg:mt-20 gap-4 w-full flex justify-center items-center">
-          <input onChange={(e) => searchPost(e.target.value)} type="text" placeholder="Type here to search" className="w-5/6 font-enriqueta px-2 py-1 xl:py-2 xl:px-4 rounded-full border-2 xl:text-xl border-[#8a733e]"/>
+          <input onChange={(e) => searchPost(e.target.value)} type="text" placeholder="Type here to search" className="w-5/6 font-domine px-2 py-1 xl:py-2 xl:px-4 border-2 xl:text-xl bg-white bg-opacity-15 text-white"/>
         </div>
-        <div>
+        <div className="grid grid-cols-1 xsm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4">
           {
             filteredPosts.map((post) =>
               <PostSlide key={post.id} id={post.id} img={post.img} title={post.title} author={post.author} readTime={post.time} date={post.date} />

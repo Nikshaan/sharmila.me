@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import Modal from "./Modal";
 import { useState } from "react";
-import arrow from "../assets/up-arrow.png";
+import arrow from "../assets/up-arrow.jpg";
 
 const ScrollView = ({slides}) => {
   const [openModal, setOpenModal] = useState(false);
@@ -27,7 +27,7 @@ const ScrollView = ({slides}) => {
   return (
     <div className="relative">
 
-        <div className="px-4 py-8 mx-4 min-w-[320px] columns-1 md:columns-2 xl:columns-3 2xl:columns-4 gap-4 bg-black border-yellow-950 border-2">
+        <div className="px-4 py-8 mx-4 min-w-[320px] columns-1 md:columns-2 xl:columns-3 2xl:columns-4 gap-4 bg-black">
           {slides.map((slide, index) => (
             <div className="w-full mb-4 break-inside-avoid" key={index}>
                 <img
@@ -44,7 +44,7 @@ const ScrollView = ({slides}) => {
           openModal && <Modal closeModal={setOpenModal} image = {slideImg} slideList = {slides}/>
         }
 
-      <div className={`fixed z-20 bg-[#fff5de] border-2 border-black p-2 rounded-full  bottom-0.5 right-0.5 lg:bottom-3 lg:right-3 xl:bottom-5 xl:right-5 ${showArrow?'block':'hidden'}`}>
+      <div className={`fixed z-20 bg-black border-2 p-2 rounded-full  bottom-0.5 right-0.5 lg:bottom-3 lg:right-3 xl:bottom-5 xl:right-5 ${showArrow?'block':'hidden'}`}>
         <img className="cursor-pointer h-10" alt="arrow" onClick={() => {window.scrollTo({top: 0, behavior: 'smooth'});}} src={arrow} />
       </div>
 
