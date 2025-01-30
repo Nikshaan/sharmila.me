@@ -103,15 +103,18 @@ import gal110 from "../assets/Paintings/gal110.jpg";
 import gal111 from "../assets/Paintings/gal111.jpg";
 import "react-toggle/style.css";
 import Toggle from "react-toggle";
+import paintingsDesc from "../assets/paintingsDesc";
 
 const Paintings = () => {
   const OPTIONS = { dragFree: true, loop: true }
+
   const SLIDES = [gal1, gal2, gal3, gal4, gal5, gal6, gal7, gal8, gal9, gal10, gal11, gal12, gal13, gal14, gal15, gal16, gal17, gal18, gal19, gal20,
      gal21, gal22, gal23, gal24, gal25, gal26, gal27, gal28, gal29, gal30, gal31, gal32, gal33, gal34, gal35, gal36, gal37, gal38, gal39, gal40,
      gal41, gal42, gal43, gal44, gal45, gal46, gal47, gal48, gal49, gal50, gal51, gal52, gal53, gal54, gal55, gal56, gal57, gal58, gal59, gal60,
      gal61, gal62, gal63, gal64, gal65, gal66, gal67, gal81, gal82, gal83, gal84, gal85, gal86, gal87, gal88, gal89, gal90, gal91, gal92, gal93,
      gal94, gal95, gal96, gal97, gal98, gal99, gal100, gal101, gal102, gal103, gal104, gal105, gal106, gal107, gal108, gal109, gal110, gal111];
-  const [showSlide, setShowSlide] = useState("scroller");
+  
+     const [showSlide, setShowSlide] = useState("scroller");
 
   useEffect(()=> {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
@@ -138,13 +141,13 @@ const Paintings = () => {
   }
 
   return (
-    <div className="w-full h-full bg-gradient-to-b from-black to-[#14014f]">
+    <div className="w-[80%] 2xl:w-[70%] 4xl:w-[60%] m-auto h-full bg-transparent">
         <div id="navbar" className="fixed top-0 right-0 left-0 transition-all duration-200 z-20">
             <Navbar />
         </div>
 
         <div className="pt-20 pb-4 w-full flex flex-col justify-center items-center">
-            <h1 className="text-center text-6xl lg:text-8xl 2xl:text-9xl font-domine pt-12 text-white">PAINTINGS</h1>
+            <h1 className="text-center text-6xl lg:text-8xl font-domine pt-12 text-white">PAINTINGS</h1>
         </div>
 
         <div className="h-full">
@@ -164,7 +167,7 @@ const Paintings = () => {
                 showSlide == "parallax" && <EmblaCarousel slides={SLIDES} options={OPTIONS}/>
               }
               {
-                showSlide == "scroller" && <ScrollView slides={SLIDES}/>
+                showSlide == "scroller" && <ScrollView slides={SLIDES} desc={paintingsDesc}/>
               }
             </div>
             

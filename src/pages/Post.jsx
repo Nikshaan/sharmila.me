@@ -51,7 +51,7 @@ const Post = () => {
     }
 
   return (
-    <div className="bg-gradient-to-b from-black to-[#14014f] text-white min-w-[390px]">
+    <div className="bg-gradient-to-b from-black to-[#14014f] text-white min-w-[390px] w-[80%] m-auto">
         <div id="navbar" className="fixed top-0 right-0 left-0 transition-all duration-200 z-50">
             <Navbar />
         </div>
@@ -62,16 +62,16 @@ const Post = () => {
             </Link>
             <img alt="poster" src={currPost.img} />
             <div className="absolute top-0 bottom-0 flex flex-col text-white bg-black bg-opacity-75 justify-center items-center w-full p-2">
-                <p className="font-bold text-4xl sm:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl">{currPost.title}</p>
-                <p className="font-medium text-2xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl">{currPost.author}</p>
+                <p className="font-bold text-3xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">{currPost.title}</p>
+                <p className="font-medium text-xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">{currPost.author}</p>
             </div>
-            <div className="flex justify-between bottom-0 items-center px-2 gap-4 text-white absolute w-full text-md sm:text-2xl lg:text-3xl 2xl:text-5xl font-thin">
+            <div className="flex justify-between bottom-0 items-center px-2 gap-4 text-white absolute w-full text-sm sm:text-xl lg:text-2xl 2xl:text-4xl font-thin">
                 <p>{currPost.time} read</p>
                 <p>Posted on {currPost.date}</p>
             </div>
         </div>
 
-        <div id="content" className="my-10 md:px-6 lg:px-12 2xl:px-64 lg:my-20 p-2 text-xl sm:text-2xl 2xl:text-3xl font-raleway flex flex-col gap-4" />
+        <div id="content" className="my-10 lg:my-20 p-2 text-xl sm:text-2xl 2xl:text-3xl font-raleway flex flex-col gap-4" />
 
         <div className="disable-text flex justify-around mb-14 text-lg sm:text-xl lg:text-2xl font-domine font-thin">
             <p onClick={prevPost} className="cursor-pointer">Previous post</p>

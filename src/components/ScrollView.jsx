@@ -3,13 +3,14 @@ import Modal from "./Modal";
 import { useState } from "react";
 import arrow from "../assets/up-arrow.png";
 
-const ScrollView = ({slides}) => {
+const ScrollView = ({slides, desc}) => {
   const [openModal, setOpenModal] = useState(false);
   const [slideImg, setSlideImg] = useState('');
   const [showArrow, setShowArrow] = useState(false);
-
+  
   ScrollView.propTypes = {
       slides: PropTypes.any,
+      desc: PropTypes.any,
     };
     
   const scrollFunc = () => {
@@ -27,15 +28,19 @@ const ScrollView = ({slides}) => {
   return (
     <div className="relative">
 
-        <div className="px-4 py-8 mx-4 min-w-[320px] columns-1 md:columns-2 xl:columns-3 2xl:columns-4 gap-4 bg-black">
+        <div className="px-4 py-8 mx-4 min-w-[320px] columns-1 md:columns-2 xl:columns-3 gap-4 bg-black">
           {slides.map((slide, index) => (
-            <div className="w-full mb-4 break-inside-avoid" key={index}>
+            <div className="w-full mb-4 break-inside-avoid border-2 p-1 cursor-pointer" key={index}>
                 <img
                   className=""
                   src={slides[index]}
                   alt="Image"
                   onClick={() => {setOpenModal(true), setSlideImg(index)}}
                 />
+                <div className="px-2 font-raleway">
+                  <p className="text-white pt-2.5 font-medium">{desc[index].name}</p>
+                  <p className="text-white pb-2.5 font-thin">{desc[index].shortDesc}</p>
+                </div>
             </div>
           ))}
         </div>

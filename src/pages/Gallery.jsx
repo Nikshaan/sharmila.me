@@ -26,13 +26,13 @@ const Gallery = () => {
   }
 
   return (
-    <div className="bg-gradient-to-b from-black to-[#14014f] min-h-[100svh] relative pb-80 min-w-[390px]">
+    <div className="bg-gradient-to-b from-black to-[#14014f] min-h-[100svh] relative pb-80 min-w-[390px] flex flex-col items-center">
       <div id="navbar" className="fixed top-0 right-0 left-0 transition-all duration-200 z-40">
           <Navbar />
       </div>
 
       <div className="pt-24 mb-14 lg:pt-40 h-full flex flex-col justify-center items-center sm:pb-16 text-white">
-        <h1 className="font-domine text-7xl lg:text-8xl 2xl:text-9xl border-b-2 border-[#6fb3f2]">GALLERY</h1>
+        <h1 className="font-domine text-7xl lg:text-8xl border-b-2 border-[#6fb3f2]">GALLERY</h1>
 
         <div className="overflow-hidden -mt-2 flex flex-col font-semibold sm:flex-row gap-2 sm:mx-10 items-start sm:mt-12">
           <motion.div
@@ -78,7 +78,7 @@ const Gallery = () => {
           </motion.div>
         </div>
       </div>
-      <div className="z-40 absolute bottom-0 w-full -mt-5">
+      <div className="z-40 absolute bottom-0 -mt-5 lg:w-[80%] 2xl:w-[60%]">
         <Footer />
       </div>
    </div>

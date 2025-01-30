@@ -9,7 +9,7 @@ import gal3 from "../assets/Craft/gal3.jpg";
 import gal4 from "../assets/Craft/gal4.jpg";
 import gal5 from "../assets/Craft/gal5.jpg";
 import Toggle from "react-toggle";
-
+import craftDesc from "../assets/craftDesc";
 
 const Craft = () => {
   const OPTIONS = { dragFree: true, loop: true };
@@ -41,13 +41,13 @@ const viewMode = () => {
 }
 
   return (
-    <div className="bg-gradient-to-b from-black to-[#14014f] w-full h-full">
+    <div className="w-[80%] 2xl:w-[70%] 4xl:w-[60%] m-auto h-full bg-transparent">
         <div id="navbar" className="fixed top-0 right-0 left-0 transition-all duration-200 z-20">
             <Navbar />
         </div>
 
         <div className="pt-20 pb-4 w-full flex flex-col justify-center items-center">
-            <h1 className="text-center text-6xl lg:text-8xl pt-12 2xl:text-9xl font-domine text-white">CRAFT</h1>
+            <h1 className="text-center text-6xl lg:text-8xl pt-12 font-domine text-white">CRAFT</h1>
         </div>
 
         <div className="h-full">
@@ -67,7 +67,7 @@ const viewMode = () => {
                 showSlide == "parallax" && <EmblaCarousel slides={SLIDES} options={OPTIONS}/>
               }
               {
-                showSlide == "scroller" && <ScrollView slides={SLIDES}/>
+                showSlide == "scroller" && <ScrollView slides={SLIDES} desc={craftDesc}/>
               }
             </div>
             

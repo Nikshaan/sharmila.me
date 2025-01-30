@@ -30,7 +30,7 @@ const Journal = () => {
   }
 
   return (
-    <div className="relative pb-80 min-h-[100svh] overflow-hidden min-w-[390px] bg-gradient-to-b from-black to-[#14014f]">
+    <div className="relative pb-80 min-h-[100svh] overflow-hidden min-w-[390px] w-[80%] 2xl:w-[60%] m-auto bg-gradient-to-b from-black to-[#14014f]">
       <div id="navbar" className="fixed top-0 right-0 left-0 z-40 transition-all duration-200">
           <Navbar />
       </div>
@@ -40,7 +40,7 @@ const Journal = () => {
         <div className="mt-10 mb-5 lg:mt-20 gap-4 w-full flex justify-center items-center">
           <input onChange={(e) => searchPost(e.target.value)} type="text" placeholder="Type here to search" className="w-5/6 h-10 font-raleway px-2 py-1 xl:py-2 xl:px-4 border-2 xl:text-xl bg-white bg-opacity-15 text-white"/>
         </div>
-        <div className="grid grid-cols-1 xsm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 3xl:grid-cols-5 4xl:grid-cols-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-3 4xl:grid-cols-4">
           {
             filteredPosts.map((post) =>
               <PostSlide key={post.id} id={post.id} img={post.img} title={post.title} author={post.author} readTime={post.time} date={post.date} />

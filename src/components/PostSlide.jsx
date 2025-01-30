@@ -26,7 +26,7 @@ const PostSlide = ({id, img, title, author, date, readTime }) => {
         </div>
         <div className="flex w-full flex-col justify-center items-center sm:text-center gap-1 xl:gap-4 p-1 font-domine pb-2">
             <h1 className="font-extrabold text-3xl sm:text-3xl text-center w-full">{title}</h1>
-            <p className="text-2xl  sm:text-2xl  text-center text-[#6fb3f2]">{author}</p>
+            <p className="text-xl  lg:text-2xl  text-center text-[#6fb3f2]">{author}</p>
             <p className="text-lg sm:text-xl  text-center font-raleway">{readTime} read</p>
             <p className="text-lg sm:text-xl text-center font-raleway">Posted on {date}</p>
         </div>

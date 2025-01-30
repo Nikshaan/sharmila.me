@@ -5,7 +5,8 @@
 @tailwind utilities;
 
 body, html {
-    background-color:black;
+  background: rgb(2,0,36);
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 5%, rgba(20,1,79,1) 97%);
     margin: 0;
     padding: 0;
     min-width: 390px;
