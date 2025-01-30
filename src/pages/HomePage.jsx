@@ -13,7 +13,7 @@ import ParticlesComponent from "../components/particles";
 
 const HomePage = () => {
   return (
-    <div className="bg-gradient-to-b from-black to-[#14014f] w-full min-w-[390px] h-[100svh] overflow-hidden absolute top-0 bottom-0 flex flex-col justify-center items-center text-white">  
+    <div className="bg-gradient-to-b from-black to-[#14014f] w-full min-w-[390px] min-h-[100svh] overflow-hidden absolute top-0 bottom-0 flex flex-col justify-center items-center text-white">  
           <ParticlesComponent id="particles" />
           <div className="absolute top-0 right-0 left-0 z-40 transition-all duration-200">
             <Navbar />
@@ -21,7 +21,7 @@ const HomePage = () => {
           <div className="flex flex-col mb-[80px] justify-center items-center gap-1 z-30 w-full">
             
             <div className="z-30 w-full">
-              <h1 className="disable-text cursor-default text-7xl lg:text-8xl xl:text-9xl 2xl:text-[10rem] text-center font-domine z-30 w-full">
+              <h1 className="disable-text cursor-default text-7xl lg:text-8xl xl:text-9xl 2xl:text-[10rem] 4xl:text-[12rem] text-center font-domine z-30 w-full">
               {"Sharmila Sharma".split("").map((letter, index) =>
                             (
                                 <span className = "hoverText z-50" key={index}>
@@ -32,7 +32,7 @@ const HomePage = () => {
               </h1>
             </div>
             <div className="-mt-1 flex justify-center items-center w-full">
-              <div className="font-domine text-[#6fb3f2] -mt-0 text-base sm:text-xl lg:text-3xl">
+              <div className="font-raleway text-[#6fb3f2] text-base sm:text-xl lg:text-3xl">
                 <Typewriter 
                 options={{
                   strings: ["Professional Artist", "Love creating beautiful art."],

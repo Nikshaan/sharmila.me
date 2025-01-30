@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import Modal from "./Modal";
 import { useState } from "react";
-import arrow from "../assets/up-arrow.jpg";
+import arrow from "../assets/up-arrow.png";
 
 const ScrollView = ({slides}) => {
   const [openModal, setOpenModal] = useState(false);
@@ -44,8 +44,8 @@ const ScrollView = ({slides}) => {
           openModal && <Modal closeModal={setOpenModal} image = {slideImg} slideList = {slides}/>
         }
 
-      <div className={`fixed z-20 bg-black border-2 p-2 rounded-full  bottom-0.5 right-0.5 lg:bottom-3 lg:right-3 xl:bottom-5 xl:right-5 ${showArrow?'block':'hidden'}`}>
-        <img className="cursor-pointer h-10" alt="arrow" onClick={() => {window.scrollTo({top: 0, behavior: 'smooth'});}} src={arrow} />
+      <div className={`fixed z-20 bg-white border-2 border-black p-2 rounded-full  bottom-0.5 right-0.5 lg:bottom-3 lg:right-3 xl:bottom-5 xl:right-5 ${showArrow?'block':'hidden'}`}>
+        <img className="cursor-pointer h-8" alt="arrow" onClick={() => {window.scrollTo({top: 0, behavior: 'smooth'});}} src={arrow} />
       </div>
 
     </div>

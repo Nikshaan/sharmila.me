@@ -24,11 +24,11 @@ const PostSlide = ({id, img, title, author, date, readTime }) => {
         <div className=" md:w-full border-2">
             <img src={img} alt="poster" className="w-full border-black"/>
         </div>
-        <div className="flex w-full flex-col justify-center items-center sm:text-center gap-1 xl:gap-4 p-1 font-enriqueta pb-2">
-            <h1 className="font-extrabold text-3xl sm:text-4xl lg:text-5xl 2xl:text-7xl text-center w-full">{title}</h1>
-            <p className="font-semibold text-2xl  sm:text-3xl lg:text-3xl 2xl:text-5xl text-center">{author}</p>
-            <p className="text-lg sm:text-xl lg:text-2xl 2xl:text-3xl text-center">{readTime} read</p>
-            <p className="text-lg sm:text-xl lg:text-2xl 2xl:text-3xl text-center">Posted on {date}</p>
+        <div className="flex w-full flex-col justify-center items-center sm:text-center gap-1 xl:gap-4 p-1 font-domine pb-2">
+            <h1 className="font-extrabold text-3xl sm:text-3xl text-center w-full">{title}</h1>
+            <p className="text-2xl  sm:text-2xl  text-center text-[#6fb3f2]">{author}</p>
+            <p className="text-lg sm:text-xl  text-center font-raleway">{readTime} read</p>
+            <p className="text-lg sm:text-xl text-center font-raleway">Posted on {date}</p>
         </div>
         </Link>
     </motion.div>

@@ -144,11 +144,11 @@ const Paintings = () => {
         </div>
 
         <div className="pt-20 pb-4 w-full flex flex-col justify-center items-center">
-            <h1 className="text-center text-7xl lg:text-8xl 2xl:text-9xl font-domine text-white">PAINTINGS</h1>
+            <h1 className="text-center text-6xl lg:text-8xl 2xl:text-9xl font-domine pt-12 text-white">PAINTINGS</h1>
         </div>
 
         <div className="h-full">
-            <div className="w-full text-black h-14 flex justify-end items-center border-2 px-4 bg-[#6fb3f2]">
+            <div className="w-full text-black h-14 flex justify-end items-center border-2 px-4 bg-[#6fb3f2] font-raleway">
               <p className="pb-1.5 font-bold">COLUMNS</p>
               <label className="px-2">
                 <Toggle
@@ -170,7 +170,7 @@ const Paintings = () => {
             
         </div>
         <Footer />
-    </div>
+      </div>
   )
 }
 export default Paintings

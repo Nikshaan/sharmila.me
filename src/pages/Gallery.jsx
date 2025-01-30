@@ -26,26 +26,26 @@ const Gallery = () => {
   }
 
   return (
-    <div className="bg-gradient-to-b from-black to-[#14014f] relative pb-80 min-w-[390px]">
+    <div className="bg-gradient-to-b from-black to-[#14014f] min-h-[100svh] relative pb-80 min-w-[390px]">
       <div id="navbar" className="fixed top-0 right-0 left-0 transition-all duration-200 z-40">
           <Navbar />
       </div>
 
-      <div className="pt-20 mb-14 h-full flex flex-col justify-center items-center sm:pb-16 text-white">
-        <h1 className="font-domine text-8xl lg:text-9xl 2xl:text-[10rem] border-b-2 border-[#6fb3f2]">GALLERY</h1>
+      <div className="pt-24 mb-14 lg:pt-40 h-full flex flex-col justify-center items-center sm:pb-16 text-white">
+        <h1 className="font-domine text-7xl lg:text-8xl 2xl:text-9xl border-b-2 border-[#6fb3f2]">GALLERY</h1>
 
-        <div className="overflow-hidden mt-2 flex flex-col font-semibold sm:flex-row gap-2 sm:mx-10 items-start sm:mt-20">
+        <div className="overflow-hidden -mt-2 flex flex-col font-semibold sm:flex-row gap-2 sm:mx-10 items-start sm:mt-12">
           <motion.div
           initial = {{ opacity: 0}}
           animate = {{opacity: 1}}
           transition={{duration: 2}}
-          className="relative sm:w-[170%] mx-10 sm:my-0 sm:mx-3 mt-14 mb-7 flex flex-col justify-center p-4 pt-8 items-center hover:scale-105 duration-200 transition-all">
+          className="relative sm:w-[170%] mx-10 sm:my-0 sm:mx-3 mt-16 mb-7 flex flex-col justify-center p-4 pt-8 items-center hover:scale-105 duration-200 transition-all">
             <Link to="/sharmila.me/gallery/paintings" className="flex justify-center items-center">
               <img src={gal1} alt="album-1" className="rounded-md border-2 shadow-lg shadow-[#6fb3f2] 2xl:w-2/3"/>
             </Link>
             <div className="h-0.5 w-[90%] xl:w-[70%] mt-8 mb-4 bg-[#6fb3f2]" />
             <div className="flex w-full justify-center items-end rounded-lg">
-              <p className="w-full text-center text-4xl 2xl:text-6xl font-domine">PAINTINGS</p>
+              <p className="w-full text-center text-3xl lg:text-4xl 2xl:text-6xl font-raleway font-thin">PAINTINGS</p>
             </div>
           </motion.div>
 
@@ -53,13 +53,13 @@ const Gallery = () => {
           initial = {{ opacity: 0}}
           animate = {{opacity: 1}}
           transition={{duration: 2}}
-          className="relative sm:w-[170%] m-10 sm:m-0 mt-0  p-4 pt-8 flex flex-col justify-center items-center hover:scale-105 duration-200 transition-all">
+          className="relative sm:w-[170%] m-10 sm:m-0 -mt-2  p-4 pt-8 flex flex-col justify-center items-center hover:scale-105 duration-200 transition-all">
             <Link to="/sharmila.me/gallery/craft" className="flex justify-center items-center">
               <img src={gal2} alt="album-2" className="rounded-md border-2 shadow-lg shadow-[#6fb3f2] 2xl:w-2/3"/>
             </Link>
             <div className="h-0.5 w-[90%] xl:w-[70%] mt-8 mb-4 bg-[#6fb3f2]" />
             <div className="flex w-full justify-center items-end rounded-lg">
-              <p className="w-full text-center text-4xl 2xl:text-6xl font-domine">CRAFT</p>
+              <p className="w-full text-center text-3xl lg:text-4xl 2xl:text-6xl font-raleway  font-thin">CRAFT</p>
             </div>
           </motion.div>
 
@@ -67,13 +67,13 @@ const Gallery = () => {
           initial = {{ opacity: 0}}
           animate = {{opacity: 1}}
           transition={{duration: 2}}
-          className="relative sm:w-[170%] m-10 sm:m-0 mt-0 p-4 pt-8 flex flex-col justify-center items-center hover:scale-105 duration-200 transition-all">
+          className="relative sm:w-[170%] m-10 sm:m-0 -mt-2 p-4 pt-8 flex flex-col justify-center items-center hover:scale-105 duration-200 transition-all">
             <Link to="/sharmila.me/gallery/flora" className="flex justify-center items-center">
               <img src={gal3} alt="album-3" className="rounded-md border-2 shadow-lg shadow-[#6fb3f2] 2xl:w-2/3"/>
             </Link>
             <div className="h-0.5 w-[90%] xl:w-[70%] mt-8 mb-4 bg-[#6fb3f2]" />
             <div className="flex w-full justify-center items-end rounded-lg">
-              <p className="w-full text-center text-4xl 2xl:text-6xl font-domine">FLORA</p>
+              <p className="w-full text-center text-3xl lg:text-4xl 2xl:text-6xl font-raleway  font-thin">FLORA</p>
             </div>
           </motion.div>
         </div>

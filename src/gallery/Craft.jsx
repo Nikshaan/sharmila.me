@@ -40,7 +40,6 @@ const viewMode = () => {
   }
 }
 
-
   return (
     <div className="bg-gradient-to-b from-black to-[#14014f] w-full h-full">
         <div id="navbar" className="fixed top-0 right-0 left-0 transition-all duration-200 z-20">
@@ -48,20 +47,20 @@ const viewMode = () => {
         </div>
 
         <div className="pt-20 pb-4 w-full flex flex-col justify-center items-center">
-            <h1 className="text-center text-7xl lg:text-8xl 2xl:text-9xl font-domine text-white">CRAFT</h1>
+            <h1 className="text-center text-6xl lg:text-8xl pt-12 2xl:text-9xl font-domine text-white">CRAFT</h1>
         </div>
 
         <div className="h-full">
-            <div className="w-full text-black h-14 flex justify-end items-center border-2 px-4 bg-[#6fb3f2]">
-                          <p className="pb-1.5 font-bold">COLUMNS</p>
-                          <label className="px-2">
-                            <Toggle
-                              defaultChecked={false}
-                              icons={false}
-                              onChange={() => viewMode()} />
-                          </label>
-                          <p className="pb-1.5 font-bold">PARALLAX</p>
-                        </div>
+            <div className="w-full text-black h-14 flex justify-end items-center border-2 px-4 bg-[#6fb3f2] font-raleway">
+              <p className="pb-1.5 font-bold">COLUMNS</p>
+              <label className="px-2">
+                <Toggle
+                  defaultChecked={false}
+                  icons={false}
+                  onChange={() => viewMode()} />
+              </label>
+              <p className="pb-1.5 font-bold">PARALLAX</p>
+            </div>
 
             <div className="w-full my-14">
               {
@@ -74,7 +73,7 @@ const viewMode = () => {
             
         </div>
         <Footer />
-    </div>
+     </div>
   )
 }
 

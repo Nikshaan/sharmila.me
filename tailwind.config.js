@@ -6,14 +6,7 @@ export default {
     extend: {},
     fontFamily:{
       raleway: "Raleway",
-      crimson: "Crimson Text",
-      enriqueta: "Enriqueta",
-      nunito: "Nunito",
-      luxury: "Luxurious Roman",
-      almendra: "Almendra SC",
-      noto: "Noto Serif",
       domine: "Domine",
-      sree: "Sree Krushnadevaraya"
     },
     
     screens: {

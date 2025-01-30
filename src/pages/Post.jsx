@@ -56,9 +56,9 @@ const Post = () => {
             <Navbar />
         </div>
 
-        <div className="w-full mt-16 relative text-center font-nunito flex flex-col justify-center items-center">
+        <div className="w-full mt-16 relative text-center font-domine flex flex-col justify-center items-center">
             <Link to="/sharmila.me/journal">
-                <img alt="back" src={back} className="h-8 lg:h-10 absolute top-2 left-2 bg-white rounded-full z-20"/>
+                <img alt="back" src={back} className="h-8 lg:h-10 absolute top-2 left-2 bg-white border-2 rounded-full z-20"/>
             </Link>
             <img alt="poster" src={currPost.img} />
             <div className="absolute top-0 bottom-0 flex flex-col text-white bg-black bg-opacity-75 justify-center items-center w-full p-2">
@@ -71,9 +71,9 @@ const Post = () => {
             </div>
         </div>
 
-        <div id="content" className="my-10 xl:px-8 lg:my-20 p-2 text-xl sm:text-2xl lg:text-3xl font-nunito flex flex-col gap-4" />
+        <div id="content" className="my-10 md:px-6 lg:px-12 2xl:px-64 lg:my-20 p-2 text-xl sm:text-2xl 2xl:text-3xl font-raleway flex flex-col gap-4" />
 
-        <div className="disable-text flex justify-around mb-14 text-lg sm:text-xl lg:text-2xl font-luxury font-thin">
+        <div className="disable-text flex justify-around mb-14 text-lg sm:text-xl lg:text-2xl font-domine font-thin">
             <p onClick={prevPost} className="cursor-pointer">Previous post</p>
             <p onClick={() => document.body.scrollTop = document.documentElement.scrollTop = 0} className="cursor-pointer">Back to Top</p>
             <p onClick={nextPost} className="cursor-pointer">Next post</p>

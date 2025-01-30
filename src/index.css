@@ -1,14 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Enriqueta:wght@400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=League+Script&family=Ms+Madi&family=Petit+Formal+Script&family=Playwrite+HR+Lijeva:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Almendra+SC&family=Luxurious+Roman&family=Pirata+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Sree+Krushnadevaraya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body, html {
-    background-color:#14014f;
+    background-color:black;
     margin: 0;
     padding: 0;
     min-width: 390px;
@@ -117,7 +114,7 @@ body, html {
 
 .hoverText:hover + .hoverText {
     font-weight: 500;
-    color: rgb(107, 162, 214);
+    color: rgb(149, 198, 244);
 }
 
 .hoverText:hover + .hoverText+ .hoverText {
@@ -126,7 +123,7 @@ body, html {
 
 .hoverText:has(+ .hoverText:hover) {
     font-weight: 500;
-    color: rgb(101, 154, 203);
+    color: rgb(128, 184, 236);
 }
 
 .hoverText:has(+ .hoverText + .hoverText:hover) {
