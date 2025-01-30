@@ -9,10 +9,12 @@ import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
+import ParticlesComponent from "../components/particles";
 
 const HomePage = () => {
   return (
-    <div className="bg-gradient-to-b from-black to-[#14014f] w-full min-w-[390px] h-[100svh] overflow-hidden absolute top-0 bottom-0 flex flex-col justify-center items-center text-white">    
+    <div className="bg-gradient-to-b from-black to-[#14014f] w-full min-w-[390px] h-[100svh] overflow-hidden absolute top-0 bottom-0 flex flex-col justify-center items-center text-white">  
+          <ParticlesComponent id="particles" />
           <div className="absolute top-0 right-0 left-0 z-40 transition-all duration-200">
             <Navbar />
           </div>
