@@ -24,7 +24,7 @@ const About = () => {
   }
 
   return (
-    <div className="relative pb-80 min-w-[390px] w-[80%] 2xl:w-[60%] m-auto min-h-[100svh] h-full bg-gradient-to-b from-black to-[#14014f] text-white flex flex-col items-center">
+    <div className="relative pb-80 min-w-[390px] w-[80%] 2xl:w-[60%] m-auto min-h-[100svh] h-full bg-transparent text-white flex flex-col items-center">
     <div id="navbar" className="fixed top-0 right-0 left-0 z-40 transition-all duration-200">
         <Navbar />
     </div>

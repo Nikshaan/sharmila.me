@@ -26,7 +26,7 @@ const Gallery = () => {
   }
 
   return (
-    <div className="bg-gradient-to-b from-black to-[#14014f] min-h-[100svh] relative pb-80 min-w-[390px] flex flex-col items-center">
+    <div className="bg-transparent min-h-[100svh] relative pb-80 min-w-[390px] flex flex-col items-center">
       <div id="navbar" className="fixed top-0 right-0 left-0 transition-all duration-200 z-40">
           <Navbar />
       </div>

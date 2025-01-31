@@ -30,7 +30,7 @@ const Journal = () => {
   }
 
   return (
-    <div className="relative pb-80 min-h-[100svh] overflow-hidden min-w-[390px] w-[80%] 2xl:w-[60%] m-auto bg-gradient-to-b from-black to-[#14014f]">
+    <div className="relative pb-80 min-h-[100svh] overflow-hidden min-w-[390px] w-[80%] 2xl:w-[60%] m-auto bg-transparent">
       <div id="navbar" className="fixed top-0 right-0 left-0 z-40 transition-all duration-200">
           <Navbar />
       </div>
