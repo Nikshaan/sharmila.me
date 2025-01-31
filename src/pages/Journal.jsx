@@ -35,8 +35,8 @@ const Journal = () => {
           <Navbar />
       </div>
 
-      <div className="h-full lg:pt-16 flex flex-col justify-center items-center sm:pb-5 my-20">
-        <h1 className="border-b-2 pt-4 font-domine text-7xl lg:text-8xl 2xl:text-9xl text-white border-[#6fb3f2]">JOURNAL</h1>
+      <div className="h-full lg:pt-8 flex flex-col justify-center items-center sm:pb-5 my-20">
+        <h1 className="border-b-2  font-manrope text-7xl lg:text-8xl 2xl:text-9xl text-white border-[#6fb3f2]">JOURNAL</h1>
         <div className="mt-10 mb-5 lg:mt-20 gap-4 w-full flex justify-center items-center">
           <input onChange={(e) => searchPost(e.target.value)} type="text" placeholder="Type here to search" className="w-5/6 h-10 font-raleway px-2 py-1 xl:py-2 xl:px-4 border-2 xl:text-xl bg-white bg-opacity-15 text-white"/>
         </div>

@@ -31,8 +31,8 @@ const Gallery = () => {
           <Navbar />
       </div>
 
-      <div className="pt-24 mb-14 lg:pt-40 h-full flex flex-col justify-center items-center sm:pb-16 text-white">
-        <h1 className="font-domine text-7xl lg:text-8xl border-b-2 border-[#6fb3f2]">GALLERY</h1>
+      <div className="pt-24 mb-14 lg:pt-28 h-full flex flex-col justify-center items-center sm:pb-16 text-white">
+        <h1 className="font-manrope text-7xl lg:text-8xl 2xl:text-9xl border-b-2 border-[#6fb3f2]">GALLERY</h1>
 
         <div className="overflow-hidden -mt-2 flex flex-col font-semibold sm:flex-row gap-2 sm:mx-10 items-start sm:mt-12">
           <motion.div

@@ -21,7 +21,7 @@ const HomePage = () => {
           <div className="flex flex-col mb-[80px] justify-center items-center gap-1 z-30 w-full">
             
             <div className="z-30 w-full">
-              <h1 className="disable-text cursor-default text-7xl lg:text-8xl xl:text-9xl 2xl:text-[10rem] 4xl:text-[12rem] text-center font-domine z-30 w-full">
+              <h1 className="disable-text cursor-default text-8xl lg:text-9xl xl:text-[10rem] 2xl:text-[11rem] 4xl:text-[12rem] text-center font-manrope z-30 w-full">
               {"Sharmila Sharma".split("").map((letter, index) =>
                             (
                                 <span className = "hoverText z-50" key={index}>

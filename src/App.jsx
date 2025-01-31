@@ -9,6 +9,7 @@ import Flora from "./gallery/Flora";
 import Post from "./pages/Post";
 import { useEffect, useState } from "react";
 import PreLoader from "./components/PreLoader";
+import PaintingPage from "./pages/PaintingPage";
 
 const App = () => {
   const [loader, upadateLoader] = useState(true);
@@ -31,6 +32,7 @@ const App = () => {
       <Route path="/sharmila.me/gallery/craft" element={<Craft />} />
       <Route path="/sharmila.me/gallery/flora" element={<Flora />} />
       <Route path="/sharmila.me/journal/post/:postId" element={<Post />} />
+      <Route path='/sharmila.me/gallery/paintings/:paintingID' element={<PaintingPage />}/>
     </Routes>
     </>
   )

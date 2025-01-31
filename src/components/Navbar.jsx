@@ -6,10 +6,10 @@ const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
     
   return (
-    <div className="w-full font-semibold font-domine h-16 flex justify-center items-center px-4 bg-black text-white lg:py-2">
+    <div className="w-full font-semibold font-manrope h-16 flex justify-center items-center px-4 bg-black text-white lg:py-2">
         <div className="absolute left-2 px-2">
             <Link to="/sharmila.me/">
-                <p className="text-3xl md:-mt-1.5 lg:text-5xl pt-2 text-end font-domine font-extrabold duration-200">SS.</p>
+                <p className="text-3xl font-domine md:-mt-1.5 lg:text-5xl pt-2 text-end font-extrabold duration-200">SS.</p>
             </Link>
         </div>
 
@@ -18,7 +18,7 @@ const Navbar = () => {
                 <Hamburger toggled={isOpen} toggle={setOpen} />
                 <div>
                     {
-                    isOpen && <div className="z-50 font-domine bg-black cursor-default mt-1.5 top-12 font-bold rounded-2xl flex flex-col justify-between items-center absolute -right-1 border-2">
+                    isOpen && <div className="z-50 font-manrope bg-black cursor-default mt-1.5 top-12 font-bold rounded-2xl flex flex-col justify-between items-center absolute -right-1 border-2">
                         <NavLink to="/sharmila.me/gallery">
                             <p onClick={() => setOpen(false)} className="px-10 py-2 hover:scale-95 duration-200 underline-offset-2">gallery</p>
                         </NavLink>
@@ -33,7 +33,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <ul className="gap-8 font-domine md:text-lg lg:text-3xl hidden sm:flex">
+            <ul className="gap-8 font-manrope md:text-lg lg:text-3xl hidden sm:flex">
                 <NavLink to="/sharmila.me/gallery">
                     <p className="underline-offset-2 hover:scale-95 duration-200">gallery</p>
                 </NavLink>

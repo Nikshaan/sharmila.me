@@ -7,6 +7,7 @@ export default {
     fontFamily:{
       raleway: "Raleway",
       domine: "Domine",
+      manrope: "Manrope",
     },
     
     screens: {
