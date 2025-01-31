@@ -146,7 +146,7 @@ const Paintings = () => {
             <Navbar />
         </div>
 
-        <div className="pt-20 pb-4 w-full flex flex-col justify-center items-center">
+        <div className="pt-16 pb-4 w-full flex flex-col justify-center items-center">
             <h1 className="text-center text-6xl lg:text-8xl font-manrope pt-12 text-white">PAINTINGS</h1>
         </div>
 

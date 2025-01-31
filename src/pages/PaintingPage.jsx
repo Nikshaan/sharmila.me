@@ -12,9 +12,20 @@ const PaintingPage = () => {
         document.body.scrollTop = document.documentElement.scrollTop = 0;
       }, [])
 
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = () => {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("navbar").style.top = "0";
+      } else if (currentScrollPos >= 24) {
+        document.getElementById("navbar").style.top = "-200px";
+      }
+      prevScrollpos = currentScrollPos;
+    }
+
   return (
     <div className="w-full m-auto h-full flex flex-col items-center">
-        <div className="fixed top-0 right-0 left-0 z-40 transition-all duration-200">
+        <div id="navbar" className="fixed top-0 right-0 left-0 z-40 transition-all duration-200">
             <Navbar />
         </div>
 
