@@ -32,7 +32,7 @@ const HomePage = () => {
               </h1>
             </div>
             <div className="-mt-1 flex justify-center items-center w-full">
-              <div className="font-raleway text-[#7f00e0] text-base sm:text-xl lg:text-2xl 2xl:text-3xl">
+              <div className="font-raleway text-[#7f00e0] text-lg sm:text-xl lg:text-2xl 2xl:text-3xl">
                 <Typewriter 
                 options={{
                   strings: ["Professional Artist", "Love creating beautiful art."],
