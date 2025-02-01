@@ -47,11 +47,11 @@ const viewMode = () => {
         </div>
 
         <div className="pt-16 pb-4 w-full flex flex-col justify-center items-center">
-            <h1 className="text-center text-6xl lg:text-8xl pt-12 font-manrope text-white">CRAFT</h1>
+            <h1 className="text-center text-6xl lg:text-8xl pt-12 font-manrope text-[#0f1b61]">CRAFT</h1>
         </div>
 
         <div className="h-full">
-            <div className="w-full text-black h-14 flex justify-end items-center border-2 px-4 bg-[#6fb3f2] font-raleway">
+            <div className="w-full text-black h-14 border-[#0f1b61] flex justify-end items-center border-2 px-4 bg-[#6fb3f2] font-raleway">
               <p className="pb-1.5 font-bold">COLUMNS</p>
               <label className="px-2">
                 <Toggle

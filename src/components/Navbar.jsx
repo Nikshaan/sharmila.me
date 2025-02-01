@@ -6,19 +6,19 @@ const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
     
   return (
-    <div className="w-full font-semibold font-manrope h-16 flex justify-center items-center px-4 text-white lg:py-2">
+    <div className="w-full font-semibold font-manrope h-16 flex justify-center items-center px-4 text-[#0f1b61] lg:py-2 bg-[#7f00e0] bg-opacity-10 border-2 border-[#7f00e0]">
         <div className="absolute left-2 px-2">
             <Link to="/sharmila.me/">
-                <p className="text-4xl font-domine md:-mt-1.5 lg:text-5xl pt-2 text-end font-extrabold duration-200">SS.</p>
+                <p className="text-4xl font-domine md:-mt-1.5 lg:text-5xl pt-2 text-end font-extrabold duration-200 text-[#7f00e0]">SS.</p>
             </Link>
         </div>
 
         <div>
-            <div className="sm:hidden text-lg absolute top-2 right-2 flex flex-col justify-center items-center">
+            <div className="sm:hidden text-lg absolute top-2 right-2 flex flex-col justify-center items-center text-[#7f00e0]">
                 <Hamburger toggled={isOpen} toggle={setOpen} />
                 <div>
                     {
-                    isOpen && <div className="z-50 font-manrope bg-black cursor-default mt-1.5 top-12 font-bold rounded-2xl flex flex-col justify-between items-center absolute -right-1 border-2">
+                    isOpen && <div className="z-50 font-manrope text-[#0f1b61]  border-[#0f1b61] cursor-default mt-1.5 top-12 font-bold rounded-2xl flex flex-col justify-between items-center bg-[#f5fafc] absolute -right-1 border-2">
                         <NavLink to="/sharmila.me/gallery">
                             <p onClick={() => setOpen(false)} className="px-10 py-2 hover:scale-95 duration-200 underline-offset-2">GALLERY</p>
                         </NavLink>

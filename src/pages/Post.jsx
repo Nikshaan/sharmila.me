@@ -51,7 +51,7 @@ const Post = () => {
     }
 
   return (
-    <div className="bg-gradient-to-b from-black to-[#14014f] text-white min-w-[390px] w-[80%] 2xl:w-[60%] m-auto">
+    <div className="bg-[#f5fafc] text-[#0f1b61] min-w-[390px] w-[80%] 2xl:w-[60%] m-auto">
         <div id="navbar" className="fixed top-0 right-0 left-0 transition-all duration-200 z-50">
             <Navbar />
         </div>
@@ -61,7 +61,7 @@ const Post = () => {
                 <img alt="back" src={back} className="h-8 lg:h-10 absolute top-2 left-2 bg-white border-2 rounded-full z-20"/>
             </Link>
             <img alt="poster" src={currPost.img} />
-            <div className="absolute top-0 bottom-0 flex flex-col text-white bg-black bg-opacity-75 justify-center items-center w-full p-2">
+            <div className="absolute top-0 bottom-0 flex flex-col text-white bg-black bg-opacity-75 justify-center items-center w-full p-2 border-2 border-[#0f1b61]">
                 <p className="font-bold text-3xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">{currPost.title}</p>
                 <p className="font-medium text-xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">{currPost.author}</p>
             </div>

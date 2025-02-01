@@ -24,13 +24,13 @@ const About = () => {
   }
 
   return (
-    <div className="relative pb-80 min-w-[390px] w-[80%] 2xl:w-[60%] m-auto min-h-[100svh] h-full bg-transparent text-white flex flex-col items-center">
+    <div className="relative pb-80 min-w-[390px] w-[80%] 2xl:w-[60%] m-auto min-h-[100svh] h-full bg-transparent text-[#0f1b61] flex flex-col items-center">
     <div id="navbar" className="fixed top-0 right-0 left-0 z-40 transition-all duration-200">
         <Navbar />
     </div>
 
     <div className="mt-10 pt-14 lg:pt-[4.5rem] h-full flex flex-col justify-center items-center sm:pb-5 overflow-hidden">
-        <h1 className="border-b-2 lg:mb-8 border-[#6fb3f2] text-7xl lg:text-8xl 2xl:text-9xl font-manrope">ABOUT</h1>
+        <h1 className="border-b-2 lg:mb-8 border-[#6fb3f2] text-7xl lg:text-8xl 2xl:text-9xl font-manrope text-[#0f1b61]">ABOUT</h1>
 
         <motion.div
         initial = {{ y: "100vh"}}
@@ -40,7 +40,7 @@ const About = () => {
         <p className="text-lg sm:text-xl 2xl:text-2xl overflow-hidden mt-8 text-left font-raleway font-medium px-8 sm:px-2 lg:px-10 xl:px-16">
           I am a professional artist who likes to work with artistic acrylic colors and watercolors. I have been painting for more than 25 years and planning to create innovative work and learn new things in the future. I started my artistic journey from my school days where I liked drawing, painting and from that moment onwards, I decided to take up art as a career. 
         </p>
-        <p className="text-lg sm:text-xl 2xl:text-2xl overflow-hidden mt-8 text-left font-raleway font-thin px-8 sm:px-2 lg:px-10 xl:px-16">
+        <p className="text-lg sm:text-xl 2xl:text-2xl overflow-hidden mt-8 text-left font-raleway px-8 sm:px-2 lg:px-10 xl:px-16">
           I am from Gwalior from where I also pursued a National Diploma in Fine Art at the Government Institute of Fine Arts, along with an MA in Drawing &amp; Painting from Jiwaji University. In one second year, I participated in the Intermediate Grade Drawing Examination by the Government of Maharashtra and receive an A grade. Later in my third year, I won the Late L .S. Rajput Memorial painting Award for one of my drawings. I was also awarded a certificate by Madhya Pradesh Tulsi Academy during my time at the institute. 
         </p>
         <p className="text-lg sm:text-xl 2xl:text-2xl overflow-hidden mt-8 text-left font-raleway font-medium px-8 sm:px-2 lg:px-10 xl:px-16">

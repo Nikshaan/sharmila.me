@@ -5,8 +5,7 @@
 @tailwind utilities;
 
 body, html {
-  background: rgb(2,0,36);
-  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 5%, rgba(20,1,79,1) 97%);
+    background-color: #f5fafc;
     margin: 0;
     padding: 0;
     min-width: 390px;
@@ -28,7 +27,7 @@ body, html {
 }
 
 .active {
-  color: #6fb3f2;
+  color: #7f00e0;
     text-decoration: underline;
 }
 
@@ -110,12 +109,12 @@ body, html {
 
 .hoverText:hover {
     font-weight: 900;
-    color: rgb(111, 179, 242);
+    color: rgb(138, 43, 210);
 }
 
 .hoverText:hover + .hoverText {
     font-weight: 500;
-    color: rgb(149, 198, 244);
+    color: rgb(142, 52, 211);
 }
 
 .hoverText:hover + .hoverText+ .hoverText {
@@ -124,7 +123,7 @@ body, html {
 
 .hoverText:has(+ .hoverText:hover) {
     font-weight: 500;
-    color: rgb(128, 184, 236);
+    color: rgb(122, 42, 183);
 }
 
 .hoverText:has(+ .hoverText + .hoverText:hover) {

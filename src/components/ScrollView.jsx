@@ -43,7 +43,7 @@ const ScrollView = ({slides, desc}) => {
 
         <div className="px-4 py-8 mx-4 min-w-[320px] columns-1 md:columns-2 xl:columns-3 gap-4 bg-transparent">
           {slides.map((slide, index) => (
-            <div className="w-full mb-4 break-inside-avoid border-2 p-1 cursor-pointer transition-all shadow-white duration-300 shadow-sm hover:shadow-lg hover:shadow-white" key={index}>
+            <div className="w-full mb-4 break-inside-avoid border-2 border-black p-1 cursor-pointer transition-all shadow-[#0f1b61] duration-300 shadow-sm hover:shadow-md hover:shadow-[#0f1b61]" key={index}>
                 <LazyLoadImage
                   className="group-hover:scale-95 duration-500 transition-all"
                   src={slides[index]}
@@ -53,8 +53,8 @@ const ScrollView = ({slides, desc}) => {
                   effect="blur"
                 />
                 <div className="px-2 font-raleway">
-                  <p className="text-white pt-2.5 font-medium">{desc[index].name}</p>
-                  <p className="text-white pb-2.5 font-thin">{desc[index].shortDesc}</p>
+                  <p className="pt-2.5 font-medium">{desc[index].name}</p>
+                  <p className="pb-2.5 font-thin">{desc[index].shortDesc}</p>
                 </div>
             </div>
           ))}
@@ -64,7 +64,7 @@ const ScrollView = ({slides, desc}) => {
           openModal && <Modal closeModal={setOpenModal} image = {slideImg} slideList = {slides}/>
         }
 
-      <div className={`fixed z-20 bg-white border-2 border-black p-2 rounded-full  bottom-0.5 right-0.5 lg:bottom-3 lg:right-3 xl:bottom-5 xl:right-5 ${showArrow?'block':'hidden'}`}>
+      <div className={`fixed z-20 p-2 rounded-full  bottom-0.5 right-0.5 lg:bottom-3 lg:right-3 xl:bottom-5 xl:right-5 ${showArrow?'block':'hidden'}`}>
         <img className="cursor-pointer h-8" fetchPriority="high" alt="arrow" onClick={() => {window.scrollTo({top: 0, behavior: 'smooth'});}} src={arrow} />
       </div>
 

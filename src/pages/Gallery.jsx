@@ -32,7 +32,7 @@ const Gallery = () => {
       </div>
 
       <div className="pt-24 mb-14 lg:pt-28 h-full flex flex-col justify-center items-center sm:pb-16 text-white">
-        <h1 className="font-manrope text-7xl lg:text-8xl 2xl:text-9xl border-b-2 border-[#6fb3f2]">GALLERY</h1>
+        <h1 className="font-manrope text-7xl lg:text-8xl 2xl:text-9xl border-b-2 border-[#6fb3f2] text-[#0f1b61]">GALLERY</h1>
 
         <div className="overflow-hidden xl:w-[70%] -mt-2 flex flex-col md:grid grid-cols-3 gap-4 font-semibold sm:mx-10 items-start sm:mt-12">
           <motion.div
@@ -41,11 +41,11 @@ const Gallery = () => {
           transition={{duration: 2}}
           className="relative m-10 sm:m-0 mt-16 mb-7 flex flex-col justify-center p-4 pt-8 items-center hover:scale-105 duration-200 transition-all">
             <Link to="/sharmila.me/gallery/paintings" className="flex justify-center items-center">
-              <img src={gal1} alt="album-1" className="rounded-md border-2 shadow-lg shadow-[#6fb3f2] w-full xsm:w-2/3 md:w-full"/>
+              <img src={gal1} alt="album-1" className="rounded-md border-2 border-[#0f1b61] shadow-lg shadow-[#6fb3f2] w-full xsm:w-2/3 md:w-full"/>
             </Link>
             <div className="h-0.5 xsm:w-[55%] sm:w-[70%] md:w-[90%] mt-8 mb-4 bg-[#6fb3f2]" />
             <div className="flex w-full justify-center items-end rounded-lg">
-              <p className="w-full text-center text-3xl lg:text-4xl 2xl:text-6xl font-raleway font-thin">PAINTINGS</p>
+              <p className="w-full text-center text-3xl lg:text-4xl 2xl:text-6xl font-raleway font-light text-[#0f1b61]">PAINTINGS</p>
             </div>
           </motion.div>
 
@@ -55,11 +55,11 @@ const Gallery = () => {
           transition={{duration: 2}}
           className="relative m-10 sm:m-0 -mt-2  p-4 pt-8 flex flex-col justify-center items-center hover:scale-105 duration-200 transition-all">
             <Link to="/sharmila.me/gallery/craft" className="flex justify-center items-center">
-              <img src={gal2} alt="album-2" className="rounded-md border-2 shadow-lg shadow-[#6fb3f2] w-full xsm:w-2/3 md:w-full"/>
+              <img src={gal2} alt="album-2" className="rounded-md border-2 border-[#0f1b61] shadow-lg shadow-[#6fb3f2] w-full xsm:w-2/3 md:w-full"/>
             </Link>
             <div className="h-0.5 xsm:w-[55%] sm:w-[70%] md:w-[90%] mt-8 mb-4 bg-[#6fb3f2]" />
             <div className="flex w-full justify-center items-end rounded-lg">
-              <p className="w-full text-center text-3xl lg:text-4xl 2xl:text-6xl font-raleway font-thin">CRAFT</p>
+              <p className="w-full text-center text-3xl lg:text-4xl 2xl:text-6xl font-raleway font-light text-[#0f1b61]">CRAFT</p>
             </div>
           </motion.div>
 
@@ -69,11 +69,11 @@ const Gallery = () => {
           transition={{duration: 2}}
           className="relative m-10 sm:m-0 -mt-2 p-4 pt-8 flex flex-col justify-center items-center hover:scale-105 duration-200 transition-all">
             <Link to="/sharmila.me/gallery/flora" className="flex justify-center items-center">
-              <img src={gal3} alt="album-3" className="rounded-md border-2 shadow-lg shadow-[#6fb3f2] w-full xsm:w-2/3 md:w-full"/>
+              <img src={gal3} alt="album-3" className="rounded-md border-2 border-[#0f1b61] shadow-lg shadow-[#6fb3f2] w-full xsm:w-2/3 md:w-full"/>
             </Link>
             <div className="h-0.5 xsm:w-[55%] sm:w-[70%] md:w-[90%] mt-8 mb-4 bg-[#6fb3f2]" />
             <div className="flex w-full justify-center items-end rounded-lg">
-              <p className="w-full text-center text-3xl lg:text-4xl 2xl:text-6xl font-raleway  font-thin">FLORA</p>
+              <p className="w-full text-center text-3xl lg:text-4xl 2xl:text-6xl font-raleway text-[#0f1b61] font-light">FLORA</p>
             </div>
           </motion.div>
         </div>
