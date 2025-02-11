@@ -6,7 +6,7 @@ const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
     
   return (
-    <div className="w-full font-semibold font-manrope h-16 flex justify-center items-center px-4 text-[#0f1b61] lg:py-2 bg-[#0f1b61] bg-opacity-5 border-2 border-[#0f1b61]">
+    <div className="w-full min-w-[344px] bg-[#f5fafc] font-semibold font-manrope h-16 flex justify-center items-center px-4 text-[#0f1b61] lg:py-2 border-2 border-[#0f1b61]">
         <div className="absolute left-2 px-2">
             <Link to="/sharmila.me/">
                 <p className="text-4xl font-domine md:-mt-1.5 lg:text-5xl pt-2 text-end font-extrabold duration-200 text-[#7f00e0]">SS.</p>
