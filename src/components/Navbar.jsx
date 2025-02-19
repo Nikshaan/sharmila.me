@@ -1,9 +1,15 @@
 import { Link, NavLink } from "react-router-dom";
 import { Squash as Hamburger } from 'hamburger-react';
 import { useState } from "react";
+import { motion } from "motion/react";
 
 const Navbar = () => {
     const [isOpen, setOpen] = useState(false);
+
+    const underline = {
+        initial: {width : 0},
+        animate: {width : '100%'}
+    };
     
   return (
     <div className="w-full min-w-[344px] bg-[#f5fafc] font-semibold font-manrope h-16 flex justify-center items-center px-4 text-[#0f1b61] lg:py-2 border-2 border-[#0f1b61]">
@@ -34,15 +40,30 @@ const Navbar = () => {
             </div>
 
             <ul className="gap-8 font-manrope font-thin text-2xl lg:text-3xl hidden sm:flex">
-                <NavLink to="/sharmila.me/gallery">
-                    <p className="underline-offset-2 hover:scale-95 duration-200">GALLERY</p>
-                </NavLink>
-                <NavLink to="/sharmila.me/journal">
-                    <p className="underline-offset-2 hover:scale-95 duration-200">JOURNAL</p>
-                </NavLink>
-                <NavLink to="/sharmila.me/about">
-                    <p className="underline-offset-2 hover:scale-95 duration-200">ABOUT</p>
-                </NavLink>
+                <motion.div 
+                initial = "initial"
+                whileHover = "animate">
+                    <NavLink to="/sharmila.me/gallery">
+                        <p>GALLERY</p>
+                        <motion.div variants = {underline} className = "border-t-4 rounded-3xl border-[#7f00e0] transition-all duration-100 ease-out" />
+                    </NavLink>
+                </motion.div>
+                <motion.div 
+                initial = "initial"
+                whileHover = "animate">
+                    <NavLink to="/sharmila.me/journal">
+                        <p>JOURNAL</p>
+                        <motion.div variants = {underline} className = "border-t-4 rounded-3xl border-[#7f00e0] transition-all duration-100 ease-out" />
+                    </NavLink>
+                </motion.div>
+                <motion.div 
+                initial = "initial"
+                whileHover = "animate">
+                    <NavLink to="/sharmila.me/about">
+                        <p>ABOUT</p>
+                        <motion.div variants = {underline} className = "border-t-4 rounded-3xl border-[#7f00e0] transition-all duration-100 ease-out" />
+                    </NavLink>
+                </motion.div>
             </ul>
             
         </div>
