@@ -35,10 +35,10 @@ const Journal = () => {
           <Navbar />
       </div>
 
-      <div className="h-full pt-4 lg:pt-8 flex flex-col justify-center items-center sm:pb-5 my-20">
-        <h1 className="border-b-2  font-manrope text-7xl lg:text-8xl 2xl:text-9xl text-[#0f1b61] border-[#6fb3f2]">JOURNAL</h1>
-        <div className="mt-10 mb-5 lg:mt-20 gap-4 w-full flex justify-center items-center">
-          <input onChange={(e) => searchPost(e.target.value)} type="text" placeholder="Type here to search" className="w-5/6 h-10 font-raleway px-2 py-1 xl:py-2 xl:px-4 border-2 text-black border-[#0f1b61] xl:text-xl bg-white bg-opacity-15"/>
+      <div className="h-full flex flex-col justify-center items-center sm:pb-5 my-20">
+        <h1 className="border-b-2  font-manrope text-7xl lg:text-5xl 2xl:text-9xl border-[#f23a11]">JOURNAL</h1>
+        <div className="mb-5 mt-5 gap-4 w-full flex justify-center items-center">
+          <input onChange={(e) => searchPost(e.target.value)} type="text" placeholder="Type here to search" className="w-5/6 h-10 font-raleway px-2 py-1 xl:py-2 xl:px-2 border-2 text-black border-black xl:text-lg bg-[#ebeef0] bg-opacity-15"/>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-3 4xl:grid-cols-4">
           {

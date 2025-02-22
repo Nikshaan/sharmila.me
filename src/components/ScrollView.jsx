@@ -43,7 +43,7 @@ const ScrollView = ({slides, desc}) => {
 
         <div className="px-4 py-8 mx-4 min-w-[320px] columns-1 md:columns-2 xl:columns-3 gap-4 bg-transparent">
           {slides.map((slide, index) => (
-            <div className="w-full mb-4 break-inside-avoid border-2 border-black p-1 cursor-pointer transition-all shadow-[#0f1b61] duration-300 shadow-sm hover:shadow-md hover:shadow-[#0f1b61]" key={index}>
+            <div className="w-full mb-4 break-inside-avoid border-2 border-black p-1 cursor-pointer transition-all shadow-[#f23a11] duration-300 shadow-sm hover:shadow-md hover:shadow-[#f23a11]" key={index}>
                 <LazyLoadImage
                   className="group-hover:scale-95 duration-500 transition-all"
                   src={slides[index]}

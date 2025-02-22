@@ -146,12 +146,12 @@ const Paintings = () => {
             <Navbar />
         </div>
 
-        <div className="pt-16 pb-4 w-full flex flex-col justify-center items-center">
-            <h1 className="text-center text-6xl lg:text-8xl font-manrope pt-12 text-[#0f1b61]">PAINTINGS</h1>
+        <div className="pt-8 pb-4 w-full flex flex-col justify-center items-center">
+            <h1 className="text-center text-6xl lg:text-5xl font-manrope pt-12 border-b-2 border-[#f23a11]">PAINTINGS</h1>
         </div>
 
         <div className="h-full">
-            <div className="w-full text-black h-14 flex justify-end items-center border-2 border-[#0f1b61] px-4 bg-[#6fb3f2] font-raleway">
+            <div className="w-full text-black h-14 flex justify-end items-center border-2 bg-[#ebeef0] border-black px-4 font-raleway">
               <p className="pb-1.5 font-bold">COLUMNS</p>
               <label className="px-2">
                 <Toggle
@@ -162,7 +162,7 @@ const Paintings = () => {
               <p className="pb-1.5 font-bold">PARALLAX</p>
             </div>
 
-            <div className="w-full my-14">
+            <div className="w-full mb-14">
               {
                 showSlide == "parallax" && <EmblaCarousel slides={SLIDES} options={OPTIONS}/>
               }

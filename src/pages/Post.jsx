@@ -51,7 +51,7 @@ const Post = () => {
     }
 
   return (
-    <div className="bg-[#f5fafc] text-[#0f1b61] min-w-[390px] w-[80%] 2xl:w-[60%] m-auto">
+    <div className="min-w-[390px] w-[80%] 2xl:w-[60%] m-auto">
         <div id="navbar" className="fixed top-0 right-0 left-0 transition-all duration-200 z-50">
             <Navbar />
         </div>
@@ -60,10 +60,10 @@ const Post = () => {
             <Link to="/sharmila.me/journal">
                 <img alt="back" src={back} className="h-8 lg:h-10 absolute top-2 left-2 bg-white border-2 rounded-full z-20"/>
             </Link>
-            <img alt="poster" src={currPost.img} />
+            <img alt="poster" src={currPost.img} className="w-full h-[80svh]" />
             <div className="absolute top-0 bottom-0 flex flex-col text-white bg-black bg-opacity-75 justify-center items-center w-full p-2 border-2 border-[#0f1b61]">
-                <p className="font-bold text-3xl sm:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">{currPost.title}</p>
-                <p className="font-medium text-xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl">{currPost.author}</p>
+                <p className="font-bold text-3xl sm:text-5xl lg:text-6xl xl:text-5xl 2xl:text-8xl">{currPost.title}</p>
+                <p className="font-medium text-xl sm:text-3xl lg:text-4xl xl:text-3xl 2xl:text-6xl text-[#ff6441]">{currPost.author}</p>
             </div>
             <div className="flex justify-between bottom-0 items-center px-2 gap-4 text-white absolute w-full text-sm sm:text-xl lg:text-2xl 2xl:text-4xl font-thin">
                 <p>{currPost.time} read</p>
@@ -71,9 +71,9 @@ const Post = () => {
             </div>
         </div>
 
-        <div id="content" className="my-10 lg:my-20 p-2 sm:text-xl 2xl:text-2xl font-raleway flex flex-col gap-4" />
+        <div id="content" className="my-10 lg:mb-10 p-2 sm:text-xl 2xl:text-2xl font-raleway flex flex-col gap-4" />
 
-        <div className="disable-text flex justify-around mb-14 text-lg sm:text-xl lg:text-2xl font-manrope font-thin">
+        <div className="disable-text flex justify-around mb-10 text-lg sm:text-xl lg:text-xl font-manrope font-thin">
             <p onClick={prevPost} className="cursor-pointer">Previous post</p>
             <p onClick={() => document.body.scrollTop = document.documentElement.scrollTop = 0} className="cursor-pointer">Back to Top</p>
             <p onClick={nextPost} className="cursor-pointer">Next post</p>
