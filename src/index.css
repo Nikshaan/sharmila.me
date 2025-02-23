@@ -99,36 +99,6 @@ body, html {
 
 }
 
-.hoverText {
-  cursor: pointer;
-  transition: 
-  0.2s font-weight,
-  0.2s color;
-}
-
-.hoverText:hover {
-    font-weight: 900;
-    color: rgb(242, 58, 17);
-}
-
-.hoverText:hover + .hoverText {
-    font-weight: 500;
-    color: rgb(243, 68, 29)
-}
-
-.hoverText:hover + .hoverText+ .hoverText {
-    font-weight: 300;
-}
-
-.hoverText:has(+ .hoverText:hover) {
-    font-weight: 500;
-    color: rgb(227, 56, 18)
-}
-
-.hoverText:has(+ .hoverText + .hoverText:hover) {
-    font-weight: 300;
-}
-
 .embla {
     max-width: 30rem;
     margin: auto;

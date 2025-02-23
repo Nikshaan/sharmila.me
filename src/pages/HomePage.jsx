@@ -47,13 +47,7 @@ const HomePage = () => {
             <div className="flex flex-col bg-white pb-16 4xl:pb-32 gap-1">
               <div className="w-full mt-10">
                 <h1 className="disable-text text-nowrap cursor-default text-4xl sm:text-5xl xl:text-6xl 4xl:text-7xl font-domine w-full">
-                {"Sharmila Sharma".split("").map((letter, index) =>
-                              (
-                                  <span className = "hoverText" key={index}>
-                                      {letter}
-                                  </span>
-                              )
-                          )}
+                  Sharmila Sharma
                 </h1>
               </div>
               <div className="-mt-1 flex w-full">
@@ -67,7 +61,7 @@ const HomePage = () => {
                   />
                 </div>
               </div>
-              <div className="flex gap-2 absolute bottom-0 right-0 p-2 z-40 bg-white">
+              <div className="flex gap-2 fixed bottom-0 right-0 p-2 z-40 rounded-tl-xl bg-white">
                 <Link to="https://www.facebook.com/sharmila.sharma.7739">
                   <img data-tooltip-id="my-tooltip" data-tooltip-place="bottom" data-tooltip-content="Facebook" src={facebook} alt="facebook" className="w-9 h-9 cursor-pointer hover:scale-110 duration-200 hover:shadow-sm hover:shadow-black rounded-full"/>
                 </Link>

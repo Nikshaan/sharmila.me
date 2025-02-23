@@ -33,9 +33,9 @@ const Gallery = () => {
       <div className="pt-20 mb-14 h-full flex flex-col justify-center items-center sm:pb-16 text-white">
         <h1 className="font-manrope text-5xl 2xl:text-6xl border-b-2 border-[#f23a11] text-black">GALLERY</h1>
 
-        <div className="overflow-hidden xsm:w-2/3 md:w-[95%] lg:w-[85%] xl:w-[80%] 2xl:w-[70%] 4xl:w-[60%] flex flex-col md:grid grid-cols-3 gap-4 font-semibold sm:mx-10 items-start mt-4 xl:mt-0 p-5">
+        <div className="overflow-hidden w-[85%] xsm:w-2/3 md:w-[95%] lg:w-[85%] xl:w-[80%] 2xl:w-[70%] 4xl:w-[60%] flex flex-col md:grid grid-cols-3 gap-4 font-semibold sm:mx-10 items-start mt-4 xl:mt-0 p-5">
           
-          <div className="flex flex-col justify-center items-center mt-4">
+          <div className="flex flex-col justify-center items-center sm:mt-4">
             <Link to="/sharmila.me/gallery/paintings" className="flex relative justify-center items-center overflow-hidden border-2 border-black">
               <div className="group h-full w-full">
                 <div className="bg-black flex justify-center items-center h-0 opacity-0 w-full  group-hover:opacity-75 text-opacity-100 group-hover:h-full absolute duration-500">
