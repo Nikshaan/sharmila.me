@@ -29,14 +29,14 @@ const About = () => {
         <Navbar />
     </div>
 
-    <div className="pt-14 mt-2 lg:pt-[4.5rem] h-full flex flex-col justify-center items-center sm:pb-5 overflow-hidden">
-        <h1 className="border-b-2 border-[#f23a11] lg:mb-8 text-7xl lg:text-5xl 2xl:text-9xl font-manrope">ABOUT</h1>
+    <div className="pt-16 mt-2 lg:pt-[4.5rem] h-full flex flex-col justify-center items-center sm:pb-5 overflow-hidden">
+        <h1 className="border-b-2 border-[#f23a11] lg:mb-8 text-5xl lg:text-5xl 2xl:text-6xl font-manrope">ABOUT</h1>
 
         <motion.div
         initial = {{ y: "100vh"}}
         animate = {{y: 0}}
         transition={{ duration: 5, type: spring, stiffness: 30}} 
-        className="overflow-hidden mb-16 sm:px-10 md:px-20">
+        className="overflow-hidden mb-16 mt-6 2xl:mt-0 sm:px-10 md:px-20">
         <p className="text-lg sm:text-xl 2xl:text-2xl overflow-hidden text-left font-raleway font-medium px-8 sm:px-2 lg:px-10 xl:px-16">
           I am a professional artist who likes to work with artistic acrylic colors and watercolors. I have been painting for more than 25 years and planning to create innovative work and learn new things in the future. I started my artistic journey from my school days where I liked drawing, painting and from that moment onwards, I decided to take up art as a career. 
         </p>
@@ -52,7 +52,7 @@ const About = () => {
         </motion.div>
     </div>
     
-    <div className="z-40 absolute bottom-0 -mt-5 lg:w-[80%] 2xl:w-[60%]">
+    <div className="z-40 absolute bottom-0 -mt-5 lg:w-[80%]">
       <Footer />
     </div>
     </div>

@@ -31,15 +31,15 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col justify-center items-center p-3 my-5 ">
-            <p className="text-center text-lg sm:text-2xl lg:text-[1.3rem] font-medium font-raleway">SUBSCRIBE TO RECEIVE POSTS DIRECTLY TO YOUR INBOX</p>
-            <div className="flex w-full sm:text-lg lg:text-lg  gap-4 justify-center items-center mt-4 font-raleway">
+            <p className="text-center text-xl sm:text-2xl lg:text-[1.3rem] font-medium font-raleway">SUBSCRIBE TO RECEIVE POSTS DIRECTLY TO YOUR INBOX</p>
+            <div className="flex w-full text-xl lg:text-lg  gap-4 justify-center items-center mt-4 font-raleway">
                 <input type="text" placeholder="Enter your email address" className="px-2 py-0.5 w-full rounded-sm border-2 border-black bg-[#ebeef0]"/>
                 <button className="px-2 py-0.5 text-nowrap rounded-sm duration-300 transition-all border-2 border-black hover:text-white hover:bg-[#f23a11]"> Get notified!</button>
             </div>
         </div>
         
         <div className="mb-10">
-            <p className="text-sm sm:text-lg lg:text-xl font-thin">Copyright © Sharmila Sharma 2025</p>
+            <p className="text-xl font-thin">Copyright © Sharmila Sharma 2025</p>
         </div>
     </div>
   )

@@ -15,7 +15,7 @@ const Navbar = () => {
     <div className="w-full min-w-[344px] bg-white font-semibold font-raleway h-16 flex justify-center items-center px-4 text-black lg:py-2">
         <div className="absolute left-2 px-2">
             <Link to="/sharmila.me/">
-                <p className="text-2xl font-manrope md:-mt-1.5 lg:text-4xl pt-2 text-end font-extrabold duration-200">SS.</p>
+                <p className="text-4xl font-manrope md:-mt-1.5 2xl:text-5xl pt-2 text-end font-extrabold duration-200">SS.</p>
             </Link>
         </div>
 
@@ -24,7 +24,7 @@ const Navbar = () => {
                 <Hamburger toggled={isOpen} toggle={setOpen} />
                 <div>
                     {
-                    isOpen && <div className="z-50 cursor-default mt-1.5 top-12 font-bold rounded-2xl flex flex-col justify-between items-center bg-[#f5fafc] absolute -right-1 border-2">
+                    isOpen && <div className="z-50 cursor-default mt-1.5 top-12 rounded-2xl flex flex-col justify-between items-center bg-white absolute -right-1 border-2 border-black">
                         <NavLink to="/sharmila.me/gallery">
                             <p onClick={() => setOpen(false)} className="px-10 py-2 hover:scale-95 duration-200 underline-offset-2">GALLERY</p>
                         </NavLink>
@@ -39,7 +39,7 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <ul className="gap-8 text-xl hidden sm:flex">
+            <ul className="gap-8 text-xl 2xl:text-2xl hidden sm:flex">
                 <motion.div 
                 initial = "initial"
                 whileHover = "animate">

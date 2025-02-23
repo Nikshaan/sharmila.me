@@ -60,18 +60,18 @@ const Post = () => {
             <Link to="/sharmila.me/journal">
                 <img alt="back" src={back} className="h-8 lg:h-10 absolute top-2 left-2 bg-white border-2 rounded-full z-20"/>
             </Link>
-            <img alt="poster" src={currPost.img} className="w-full h-[80svh]" />
+            <img alt="poster" src={currPost.img} className="w-full h-full lg:h-[50svh]" />
             <div className="absolute top-0 bottom-0 flex flex-col text-white bg-black bg-opacity-75 justify-center items-center w-full p-2 border-2 border-[#0f1b61]">
-                <p className="font-bold text-3xl sm:text-5xl lg:text-6xl xl:text-5xl 2xl:text-8xl">{currPost.title}</p>
-                <p className="font-medium text-xl sm:text-3xl lg:text-4xl xl:text-3xl 2xl:text-6xl text-[#ff6441]">{currPost.author}</p>
+                <p className="font-bold text-3xl sm:text-5xl lg:text-6xl xl:text-5xl 2xl:text-6xl">{currPost.title}</p>
+                <p className="font-medium text-xl sm:text-3xl lg:text-4xl xl:text-3xl 2xl:text-4xl text-[#ff6441]">{currPost.author}</p>
             </div>
-            <div className="flex justify-between bottom-0 items-center px-2 gap-4 text-white absolute w-full text-sm sm:text-xl lg:text-2xl 2xl:text-4xl font-thin">
+            <div className="flex justify-between bottom-0 items-center px-2 gap-4 text-white absolute w-full text-sm sm:text-xl lg:text-2xl 2xl:text-3xl font-thin">
                 <p>{currPost.time} read</p>
                 <p>Posted on {currPost.date}</p>
             </div>
         </div>
 
-        <div id="content" className="my-10 lg:mb-10 p-2 sm:text-xl 2xl:text-2xl font-raleway flex flex-col gap-4" />
+        <div id="content" className="mb-10 mt-4 lg:mb-10 p-2 sm:text-xl font-raleway flex flex-col gap-4" />
 
         <div className="disable-text flex justify-around mb-10 text-lg sm:text-xl lg:text-xl font-manrope font-thin">
             <p onClick={prevPost} className="cursor-pointer">Previous post</p>

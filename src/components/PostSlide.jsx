@@ -26,7 +26,7 @@ const PostSlide = ({id, img, title, author, date, readTime }) => {
         <div className=" md:w-full">
             <LazyLoadImage effect="blur" src={img} placeholderSrc={img} alt="poster" className="w-full border-black border-2"/>
         </div>
-        <div className="flex w-full flex-col justify-start items-start sm:text-center gap-1 xl:gap-2 p-1 pl-2 font-domine pb-2">
+        <div className="flex w-full flex-col justify-start items-start gap-1 xl:gap-2 p-1 pl-2 font-domine pb-2">
             <h1 className="font-extrabold text-left text-3xl sm:text-2xl w-full">{title}</h1>
             <p className="text-xl  lg:text-xl text-[#f23a11]">{author}</p>
             <p className="text-lg sm:text-lg font-raleway">{readTime} read</p>

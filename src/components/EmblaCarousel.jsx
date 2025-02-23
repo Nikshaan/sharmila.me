@@ -118,10 +118,10 @@ const EmblaCarousel = (props) => {
 
       <div className="embla__controls">
         <div className="embla__buttons px-2">
-          <div className='bg-[#6fb3f2] border-2 rounded-2xl'>
+          <div className='bg-white border-2 rounded-2xl'>
             <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           </div>
-          <div className='bg-[#6fb3f2] border-2 rounded-2xl'>
+          <div className='bg-white border-2 rounded-2xl'>
             <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
           </div>
         </div>

@@ -29,7 +29,7 @@ const PaintingPage = () => {
             <Navbar />
         </div>
 
-        <div className="flex flex-col lg:flex-row w-[80%] 2xl:w-[70%] 4xl:w-[60%] m-auto justify-center items-center lg:pt-24 lg:items-start lg:justify-between gap-10 h-full py-20">
+        <div className="flex flex-col lg:flex-row w-[80%] 2xl:w-[70%] 4xl:w-[60%] m-auto justify-center items-center lg:pt-24 lg:items-start lg:justify-between gap-10 h-full py-20 xl:pb-48">
             <img src={SLIDES[paintingID]} className="w-full border-2 p-1 lg:w-1/2 border-black"/>
             <div className="w-full h-full flex flex-col items-start justify-start gap-2 font-raleway font-light lg:mt-0 -mt-4">
                 <p className="text-xl sm:text-2xl 2x:text-3xl font-medium font-domine">{paintingsDesc[paintingID].name?`${paintingsDesc[paintingID].name}`:null}</p>
