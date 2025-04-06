@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Homepage from "./pages/HomePage";
 import Gallery from "./pages/Gallery";
 import Journal from "./pages/Journal";
@@ -10,9 +10,12 @@ import Post from "./pages/Post";
 import { useEffect, useState } from "react";
 import PreLoader from "./components/PreLoader";
 import PaintingPage from "./pages/PaintingPage";
+import { AnimatePresence } from "motion/react";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   const [loader, upadateLoader] = useState(true);
+  const location = useLocation();
 
   useEffect(() => {
     setTimeout(() => {
@@ -23,7 +26,11 @@ const App = () => {
   return (
     <>
     <PreLoader loader={loader} />
-    <Routes>
+    <div className="z-40">
+      <Navbar />
+    </div>
+    <AnimatePresence mode="wait">
+    <Routes location={location} key={location.pathname}>
       <Route path="/sharmila.me/" element={<Homepage />} />
       <Route path="/sharmila.me/gallery" element={<Gallery />} />
       <Route path="/sharmila.me/journal" element={<Journal />} />
@@ -34,6 +41,7 @@ const App = () => {
       <Route path="/sharmila.me/journal/post/:postId" element={<Post />} />
       <Route path='/sharmila.me/gallery/paintings/:paintingID' element={<PaintingPage />}/>
     </Routes>
+    </AnimatePresence>
     </>
   )
 }
