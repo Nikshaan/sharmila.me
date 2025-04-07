@@ -11,7 +11,6 @@ import { useEffect, useState } from "react";
 import PreLoader from "./components/PreLoader";
 import PaintingPage from "./pages/PaintingPage";
 import { AnimatePresence } from "motion/react";
-import Navbar from "./components/Navbar";
 
 const App = () => {
   const [loader, upadateLoader] = useState(true);
@@ -26,9 +25,6 @@ const App = () => {
   return (
     <>
     <PreLoader loader={loader} />
-    <div className="z-40">
-      <Navbar />
-    </div>
     <AnimatePresence mode="wait">
     <Routes location={location} key={location.pathname}>
       <Route path="/sharmila.me/" element={<Homepage />} />

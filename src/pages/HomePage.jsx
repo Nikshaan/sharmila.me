@@ -3,7 +3,7 @@ import twitter from "../assets/twitter.png";
 import instagram from "../assets/instagram.png";
 import gmail from "../assets/gmail.png";
 import Typewriter from 'typewriter-effect';
-import Navbar from "../components/Navbar";
+import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
@@ -20,6 +20,7 @@ import gal10 from "../assets/gal10.jpg";
 import 'react-slideshow-image/dist/styles.css'
 import { Zoom } from 'react-slideshow-image';
 import { useEffect, useState } from "react";
+import Navbar from "../components/Navbar";
 
 const HomePage = () => {
   const [imgArr, setImgArr] = useState([]);
@@ -38,13 +39,17 @@ const HomePage = () => {
 
   return (
     <div className="bg-white w-full min-w-[344px] min-h-[100svh] h-full overflow-hidden flex-col justify-center items-center text-black">  
-
-          <div className="absolute top-0 right-0 left-0 transition-all duration-200 z-40">
+<div className="absolute top-0 right-0 left-0 transition-all duration-200 z-40">
             <Navbar />
           </div>
-
           <div className="flex flex-col xl:flex-row w-[85%] min-h-[100svh] xl:items-center xl:justify-center xl:gap-10 xl:pt-32 pt-16 m-auto bg-white pb-12 xl:pb-40">
-            <div className="flex flex-col bg-white pb-16 4xl:pb-32 gap-1">
+            <motion.div
+            initial = {{ x: "-200vh"}}
+            animate = {{x: 0}}
+            transition={{ duration: 2, ease: "easeInOut" }}
+            exit={{ x: "-200vh" }} 
+            className="flex flex-col bg-white pb-16 4xl:pb-32 gap-1">
+        
               <div className="w-full mt-10">
                 <h1 className="disable-text text-nowrap cursor-default text-4xl sm:text-5xl xl:text-6xl 4xl:text-7xl font-domine w-full">
                   Sharmila Sharma
@@ -61,7 +66,8 @@ const HomePage = () => {
                   />
                 </div>
               </div>
-              <div className="flex gap-2 fixed bottom-0 right-0 p-2 z-40 rounded-tl-xl bg-white">
+            </motion.div>
+            <div className="flex gap-2 fixed bottom-0 right-0 p-2 z-40 rounded-tl-xl bg-white">
                 <Link to="https://www.facebook.com/sharmila.sharma.7739">
                   <img data-tooltip-id="my-tooltip" data-tooltip-place="bottom" data-tooltip-content="Facebook" src={facebook} alt="facebook" className="w-9 h-9 cursor-pointer hover:scale-110 duration-200 hover:shadow-sm hover:shadow-black rounded-full"/>
                 </Link>
@@ -76,8 +82,12 @@ const HomePage = () => {
                 </Link>
                 <Tooltip id="my-tooltip" />
             </div>
-            </div>
-            <div className="bg-white w-full xl:w-1/2 2xl:w-[40%] 3xl:w-[35%]">     
+            <motion.div
+            initial = {{ x: "200vh"}}
+            animate = {{x: 0}}
+            transition={{ duration: 2, ease: "easeInOut" }}
+            exit={{ x: "200vh" }} 
+            className="bg-white w-full xl:w-1/2 2xl:w-[40%] 3xl:w-[35%]">     
             <Zoom scale={0.4} arrows={false}>
               {imgArr.map((slideImage, index)=> (
               <div className="each-slide" key={index}>
@@ -85,7 +95,7 @@ const HomePage = () => {
               </div>
               ))} 
             </Zoom>    
-            </div>
+            </motion.div>
           </div>
       </div>
   )

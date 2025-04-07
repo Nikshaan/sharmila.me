@@ -1,7 +1,7 @@
-import { spring } from "motion";
 import Footer from "../components/Footer";
 import { motion } from "motion/react";
 import { useEffect } from "react";
+import Navbar from "../components/Navbar";
 
 const About = () => {
 
@@ -23,21 +23,24 @@ const About = () => {
   }
 
   return (
+    <>
+    <div className="absolute top-0 right-0 left-0 transition-all duration-200 z-40">
+            <Navbar />
+          </div>
     <motion.div
-    initial = {{ y: "100vh"}}
+    initial = {{ y: "200vh"}}
     animate = {{y: 0}}
-    transition={{ duration: 0.2, type: spring, stiffness: 30}}
-    exit={{ y: "100vh" }} 
+    transition={{ duration: 2, ease: "easeInOut" }}
+    exit={{ y: "200vh" }} 
     className="relative pb-80 min-w-[390px] w-[80%] 2xl:w-[60%] m-auto min-h-[100svh] h-full bg-white flex flex-col items-center">
-
     <div className="pt-16 mt-2 lg:pt-[4.5rem] h-full flex flex-col justify-center items-center sm:pb-5 overflow-hidden">
         <h1 className="border-b-2 border-[#f23a11] lg:mb-8 text-5xl lg:text-5xl 2xl:text-6xl font-manrope">ABOUT</h1>
 
         <motion.div
-        initial = {{ y: "100vh"}}
+        initial = {{ y: "200vh"}}
         animate = {{y: 0}}
-        transition={{ duration: 5, type: spring, stiffness: 30}}
-        exit={{ y: "100vh" }} 
+        transition={{ duration: 1, ease: "easeIn"}}
+        exit={{ y: "200vh" }} 
         className="overflow-hidden mb-16 mt-6 2xl:mt-0 sm:px-10 md:px-20">
         <p className="text-lg sm:text-xl 2xl:text-2xl overflow-hidden text-left font-raleway font-medium px-8 sm:px-2 lg:px-10 xl:px-16">
           I am a professional artist who likes to work with artistic acrylic colors and watercolors. I have been painting for more than 25 years and planning to create innovative work and learn new things in the future. I started my artistic journey from my school days where I liked drawing, painting and from that moment onwards, I decided to take up art as a career. 
@@ -59,6 +62,7 @@ const About = () => {
     </div>
     
     </motion.div>
+    </>
   )
 }
 

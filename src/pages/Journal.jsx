@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import PostSlide from "../components/PostSlide";
 import PostContent from "../assets/PostContent";
 import { motion } from "motion/react";
+import Navbar from "../components/Navbar";
 
 const Journal = () => {
   const [filteredPosts, setFilteredPosts] = useState(PostContent);
@@ -30,18 +31,25 @@ const Journal = () => {
   }
 
   return (
+    <>
+    <div className="absolute top-0 right-0 left-0 transition-all duration-200 z-40">
+            <Navbar />
+          </div>
+    
     <motion.div
-    initial = {{ x: "-100vh"}}
-    animate = {{x: 0}}
-    transition={{ duration: 2, ease: "backInOut" }}
-    exit={{ x: "100vh" }} 
-    className="relative pb-80 min-h-[100svh] overflow-hidden min-w-[390px] w-[80%] 2xl:w-[60%] m-auto bg-transparent"> 
-
+    className="relative pb-80 min-h-[100svh]  min-w-[390px] w-[80%] 2xl:w-[60%] m-auto bg-transparent"> 
       <div className="h-full flex flex-col justify-center items-center sm:pb-5 my-20">
-        <h1 className="border-b-2  font-manrope text-5xl lg:text-5xl 2xl:text-6xl border-[#f23a11]">JOURNAL</h1>
+        <motion.div
+        initial = {{ x: "-200vh"}}
+        animate = {{x: 0}}
+        transition={{ duration: 2, ease: "backInOut" }}
+        exit={{ x: "200vh" }} 
+        className="min-w-[390px] w-[80%] 2xl:w-[60%] m-auto">
+        <h1 className="font-manrope text-5xl lg:text-5xl 2xl:text-6xl underline decoration-[#f23a11] decoration-2 underline-offset-8  text-center">JOURNAL</h1>
         <div className="mb-5 mt-5 gap-4 w-full flex justify-center items-center">
           <input onChange={(e) => searchPost(e.target.value)} type="text" placeholder="Type here to search" className="w-5/6 h-10 font-raleway px-2 py-1 xl:py-2 xl:px-2 border-2 text-black border-black xl:text-lg bg-[#ebeef0] bg-opacity-15"/>
         </div>
+      </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 3xl:grid-cols-3 4xl:grid-cols-4">
           {
             filteredPosts.map((post) =>
@@ -51,10 +59,16 @@ const Journal = () => {
         </div>
       </div>
 
-      <div className="z-40 absolute bottom-0 w-full mt-14">
+      <motion.div
+      initial = {{ x: "-200vh"}}
+      animate = {{x: 0}}
+      transition={{ duration: 2, ease: "backInOut" }}
+      exit={{ x: "200vh" }} 
+      className="z-40 absolute bottom-0 w-full mt-14">
         <Footer />
-      </div>
+      </motion.div>
     </motion.div>
+    </>
   )
 }
 

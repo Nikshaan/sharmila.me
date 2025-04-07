@@ -5,6 +5,7 @@ import gal3 from "../assets/gal3.jpg";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { motion } from "motion/react";
+import Navbar from "../components/Navbar";
 
 const Gallery = () => {
 
@@ -29,11 +30,14 @@ const Gallery = () => {
 
       <div className="pt-20 mb-14 h-full flex flex-col justify-center items-center sm:pb-16 text-white">
         <motion.h1
-        initial = {{ x: "-100vh"}}
+        initial = {{ x: "-200vh"}}
         animate = {{x: 0}}
         transition={{ duration: 2, ease: "backInOut" }}
-        exit={{ x: "100vh" }} 
+        exit={{ x: "200vh" }} 
         className="font-manrope text-5xl 2xl:text-6xl border-b-2 border-[#f23a11] text-black">GALLERY</motion.h1>
+        <div className="absolute top-0 right-0 left-0 transition-all duration-200 z-40">
+            <Navbar />
+          </div>
         <div className="w-[85%] xsm:w-2/3 md:w-[95%] lg:w-[85%] xl:w-[80%] 2xl:w-[70%] 4xl:w-[60%] font-semibold sm:mx-10 mt-4 xl:mt-0 p-5">
           <div className="grid grid-cols-2 w-full gap-4">
           <div className="flex flex-col">
@@ -100,10 +104,10 @@ const Gallery = () => {
         </div>
       </div>
       <motion.div
-      initial = {{ x: "-100vh"}}
+      initial = {{ x: "-200vh"}}
       animate = {{x: 0}}
       transition={{ duration: 2, ease: "backInOut" }}
-      exit={{ x: "100vh" }} 
+      exit={{ x: "200vh" }} 
       className="z-40 absolute bottom-0 -mt-5 lg:w-[80%] 2xl:w-[60%] 4xl:w-[60%]">
         <Footer />
       </motion.div>
