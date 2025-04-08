@@ -28,18 +28,21 @@ const Gallery = () => {
   return (
     <div className="bg-white min-h-[100svh] relative pb-80 min-w-[390px] flex flex-col items-center">
 
-      <div className="pt-20 mb-14 h-full flex flex-col justify-center items-center sm:pb-16 text-white">
+      <div className="pt-20 h-full flex flex-col justify-center items-center  text-white">
         <motion.h1
         initial = {{ x: "-200vh"}}
         animate = {{x: 0}}
         transition={{ duration: 2, ease: "backInOut" }}
         exit={{ x: "200vh" }} 
         className="font-manrope text-5xl 2xl:text-6xl border-b-2 border-[#f23a11] text-black">GALLERY</motion.h1>
+        
         <div className="absolute top-0 right-0 left-0 transition-all duration-200 z-40">
             <Navbar />
           </div>
-        <div className="w-[85%] xsm:w-2/3 md:w-[95%] lg:w-[85%] xl:w-[80%] 2xl:w-[70%] 4xl:w-[60%] font-semibold sm:mx-10 mt-4 xl:mt-0 p-5">
+
+        <div className="xsm:w-2/3 md:w-[50%] 4xl:w-[40%] font-semibold sm:mx-10 mt-4 xl:mt-0 p-2 sm:p-5">
           <div className="grid grid-cols-2 w-full gap-4">
+
           <div className="flex flex-col">
           <motion.div
           initial = {{ scale: 0, rotate: "0deg" }}
@@ -60,6 +63,7 @@ const Gallery = () => {
               <p className="w-full -mt-2 text-center text-3xl 2xl:text-4xl font-raleway font-light text-black">PAINTINGS</p>
             </div>
             </motion.div>
+
             <motion.div
             initial = {{ scale: 0, rotate: "0deg" }}
             animate = {{ scale: 1, rotate: "360deg" }}
@@ -78,9 +82,9 @@ const Gallery = () => {
             <div className="flex w-full justify-center items-end rounded-lg mr-4">
               <p className="w-full -mt-2 text-center text-3xl 2xl:text-4xl font-raleway font-light text-black">CRAFT</p>
             </div>
-      
             </motion.div>
             </div>
+            
             <motion.div
             initial = {{ scale: 0, rotate: "360deg" }}
             animate = {{ scale: 1, rotate: "0deg" }}
@@ -101,14 +105,10 @@ const Gallery = () => {
               </div>
               </motion.div>
           </div>
+
         </div>
       </div>
-      <motion.div
-      initial = {{ x: "-200vh"}}
-      animate = {{x: 0}}
-      transition={{ duration: 2, ease: "backInOut" }}
-      exit={{ x: "200vh" }} 
-      className="z-40 absolute bottom-0 -mt-5 lg:w-[80%] 2xl:w-[60%] 4xl:w-[60%]">
+      <motion.div className="z-40 absolute bottom-0 -mt-5 lg:w-[80%] 2xl:w-[60%] 4xl:w-[60%]">
         <Footer />
       </motion.div>
    </div>

@@ -55,13 +55,13 @@ const About = () => {
           Right now, I am planning to participate in various embodiments to show my artwork.
         </p>
         </motion.div>
-    </div>
+      </div>
     
-    <div className="z-40 absolute bottom-0 -mt-5 lg:w-[80%]">
-      <Footer />
-    </div>
-    
-    </motion.div>
+      <div className="z-40 absolute bottom-0 -mt-5 lg:w-[80%]">
+        <Footer />
+      </div>
+      
+      </motion.div>
     </>
   )
 }

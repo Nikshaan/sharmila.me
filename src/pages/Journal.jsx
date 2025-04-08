@@ -36,8 +36,7 @@ const Journal = () => {
             <Navbar />
           </div>
     
-    <motion.div
-    className="relative pb-80 min-h-[100svh]  min-w-[390px] w-[80%] 2xl:w-[60%] m-auto bg-transparent"> 
+    <motion.div className="relative pb-80 min-h-[100svh]  min-w-[390px] w-[80%] 2xl:w-[60%] m-auto bg-transparent"> 
       <div className="h-full flex flex-col justify-center items-center sm:pb-5 my-20">
         <motion.div
         initial = {{ x: "-200vh"}}
@@ -59,12 +58,7 @@ const Journal = () => {
         </div>
       </div>
 
-      <motion.div
-      initial = {{ x: "-200vh"}}
-      animate = {{x: 0}}
-      transition={{ duration: 2, ease: "backInOut" }}
-      exit={{ x: "200vh" }} 
-      className="z-40 absolute bottom-0 w-full mt-14">
+      <motion.div className="z-40 absolute bottom-0 w-full mt-14">
         <Footer />
       </motion.div>
     </motion.div>
