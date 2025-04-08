@@ -17,7 +17,6 @@ const PostSlide = ({id, img, title, author, date, readTime }) => {
       };
   return (
     <motion.div
-    drag
     initial = {{ x: "200vh"}}
     animate = {{x: 0}}
     exit={{x: "-200vh"}}
